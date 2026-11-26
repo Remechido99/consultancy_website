@@ -18,6 +18,8 @@ Abrir localmente: abrir `hero-espiral/index.html` no browser.
 
 Primeira versão completa da página principal, com a marca da Phira (fundo `#141414`, texto creme `#FEEAD8`, fonte Satoshi, logótipo φ oficial).
 
+Página bilingue (PT/EN, botão na navegação; arranca em inglês se o browser não estiver em português).
+
 Secções: hero animado · manifesto e oferta (piloto sem custo) · serviços por área · inteligência artificial (com exemplo animado de leitura de fatura) · método em 4 passos · caso de estudo · porquê nós · contacto.
 
 - A espiral do hero roda no sentido do símbolo φ e termina com o símbolo desenhado.

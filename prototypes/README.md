@@ -13,3 +13,13 @@ Hero animado da página principal. Página HTML única, sem dependências (só G
 - A espiral do logótipo é provisória: trocar pelo SVG oficial da Phira.
 
 Abrir localmente: abrir `hero-espiral/index.html` no browser.
+
+## site
+
+Primeira versão completa da página principal, com a marca da Phira (fundo `#141414`, texto creme `#FEEAD8`, fonte Satoshi, logótipo φ oficial).
+
+Secções: hero animado · manifesto e oferta (piloto sem custo) · serviços por área · inteligência artificial (com exemplo animado de leitura de fatura) · método em 4 passos · caso de estudo · porquê nós · contacto.
+
+- A espiral do hero roda no sentido do símbolo φ e termina com o símbolo desenhado.
+- A Satoshi vem da Fontshare (`api.fontshare.com`); Figtree fica como substituto.
+- Por preencher: `[EMAIL]` e `[EMAIL DE CONTACTO]`; confirmar com o cliente o caso da construtora antes de publicar.

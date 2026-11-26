@@ -124,7 +124,7 @@ Criar `src/content/cases/<nome>.md` com: setor (`construcao`, `imobiliario`, …
 
 ## 7. Por confirmar antes de publicar
 
-- [ ] Email de contacto (marcadores `[EMAIL]` no protótipo).
+- [x] Email de contacto: tiago@phira.ventures.
 - [ ] Autorização da Draft-in: nome, citação do Pedro Gonçalves e "15+ horas por semana".
 - [ ] Números da Lunis, sobretudo "+300% leads".
 - [ ] Lista de ferramentas no painel "Ligamos o que já usam": manter só as que conseguimos ligar hoje.

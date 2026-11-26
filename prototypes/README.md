@@ -16,12 +16,22 @@ Abrir localmente: abrir `hero-espiral/index.html` no browser.
 
 ## site
 
-Primeira versão completa da página principal, com a marca da Phira (fundo `#141414`, texto creme `#FEEAD8`, fonte Satoshi, logótipo φ oficial).
+Página principal completa, bilingue (PT/EN, botão na navegação; arranca em inglês se o browser não estiver em português). Marca Phira: fundo `#141414`, texto creme `#FEEAD8`, fonte Satoshi (Fontshare; Figtree como substituto), logótipo φ oficial.
 
-Página bilingue (PT/EN, botão na navegação; arranca em inglês se o browser não estiver em português).
+Ordem das secções:
 
-Secções: hero animado · manifesto e oferta (piloto sem custo) · serviços por área · inteligência artificial (com exemplo animado de leitura de fatura) · método em 4 passos · caso de estudo · porquê nós · contacto.
+1. **Hero animado.** Os dados soltos fogem do rato (difíceis de agarrar); com o scroll encaixam nos quadrados áureos de cada área, cada área mostra os seus KPIs, os dados correm pela espiral até ao painel central e acaba no símbolo φ com "Ordem natural para a sua empresa". `?p=0.5` no URL fixa a animação num ponto.
+2. **Software à medida.** Ligar → Organizar (dados cruzados entre áreas) → Construir, mais o painel animado "Ligamos o que já usam" (exemplos de ERP, faturação, ficheiros, email, banco, CRM, e-commerce, RH).
+3. **Serviços** por área da empresa.
+4. **IA.** "A IA adapta-se à sua empresa. Não o contrário." Diagrama animado fontes → dados centralizados → agentes → equipa, o que fazemos / não fazemos, e 4 agentes.
+5. **Casos por setor.** Separadores por setor (`#construcao`, `#imobiliario`, …); setores sem caso mostram "Em breve". Casos atuais: Draft-in (citação do Pedro Gonçalves, KPIs, demo fatura → folha de obra) e Lunis.ai (KPIs, demo plano de conteúdos + WhatsApp).
+6. **Método + confiança.** 4 passos em espiral (Compreender, Âmbito, Construção, Evolução) e "Construído por quem já construiu empresas. Com o apoio da Phira Ventures".
+7. **Contacto.**
 
-- A espiral do hero roda no sentido do símbolo φ e termina com o símbolo desenhado.
-- A Satoshi vem da Fontshare (`api.fontshare.com`); Figtree fica como substituto.
-- Por preencher: `[EMAIL]` e `[EMAIL DE CONTACTO]`; confirmar com o cliente o caso da construtora antes de publicar.
+Para adicionar um caso: copiar um bloco `<div class="slide" … data-sector="…">` dentro de `#slider` e mudar o setor; os separadores contam os casos sozinhos.
+
+Por confirmar antes de publicar:
+- `[EMAIL]` e `[EMAIL DE CONTACTO]`.
+- Autorização da Draft-in (nome, citação do Pedro e "15+ horas") e números da Lunis (sobretudo "+300% leads").
+- Lista de ferramentas no painel "Ligamos o que já usam": manter só as que conseguimos ligar.
+- Os números no hero e nas demos são exemplos ilustrativos.

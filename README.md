@@ -124,7 +124,7 @@ Criar `src/content/cases/<nome>.md` com: setor (`construcao`, `imobiliario`, …
 
 ## 7. Por confirmar antes de publicar
 
-- [x] Email de contacto: tiago@phira.ventures.
+- [ ] Ligar o envio do formulário de contacto (nome, email, setor, problema): função da Vercel que envia email para tiago@phira.ventures, ou formulário do HubSpot. No protótipo só mostra a mensagem de obrigado. Proteger contra spam (campo escondido ou Turnstile).
 - [ ] Autorização da Draft-in: nome, citação do Pedro Gonçalves e "15+ horas por semana".
 - [ ] Números da Lunis, sobretudo "+300% leads".
 - [ ] Lista de ferramentas no painel "Ligamos o que já usam": manter só as que conseguimos ligar hoje.

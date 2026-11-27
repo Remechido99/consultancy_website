@@ -122,14 +122,12 @@ Criar `src/content/cases/<nome>.md` com: setor (`construcao`, `imobiliario`, …
 - Uma branch por alteração (`caso-gesportas`, `secao-ia`, …) com pull request. A Vercel gera um link de pré-visualização para cada uma.
 - Merge para `main` só depois de revisto.
 
-## 7. Por confirmar antes de publicar
+## 7. Antes de publicar
 
-- [ ] Ligar o envio do formulário de contacto (nome, email, setor, problema): função da Vercel que envia email para tiago@phira.ventures, ou formulário do HubSpot. No protótipo só mostra a mensagem de obrigado. Proteger contra spam (campo escondido ou Turnstile).
-- [ ] Autorização da Draft-in: nome, citação do Pedro Gonçalves e "15+ horas por semana".
-- [ ] Números da Lunis, sobretudo "+300% leads".
-- [ ] Lista de ferramentas no painel "Ligamos o que já usam": manter só as que conseguimos ligar hoje.
-- [ ] Domínio do site.
-- [ ] Os números do hero e das demos são exemplos; decidir se levam a etiqueta "exemplo".
+- [ ] Ligar o envio do formulário de contacto (função da Vercel ou HubSpot) com proteção contra spam.
+- [ ] Confirmar com os clientes os textos e números de cada caso de estudo.
+- [ ] Confirmar a lista de ferramentas do painel "Ligamos o que já usam".
+- [ ] Trocar `DOMINIO` pelo domínio final.
 
 ## 8. Protótipo
 

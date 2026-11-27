@@ -1,0 +1,46 @@
+/* Phira Software — gerado a partir de tokens.json */
+:root{
+  --bg: #141414;
+  --surface: #1c1c1b;
+  --surface-raised: #2b2b2a;
+  --text: #feead8;
+  --text-dim: #feead8a3;
+  --line: #feead81f;
+  --line-strong: #feead842;
+  --on-tone: var(--bg);
+  --slate: #9fb3c9;
+  --sage: #a9bba0;
+  --sand: #ddc592;
+  --clay: #dba98f;
+  --mauve: #bfa6bc;
+  --teal: #96bab4;
+  --slate-wash: #9fb3c912;
+  --sage-wash: #a9bba012;
+  --sand-wash: #ddc59212;
+  --clay-wash: #dba98f12;
+  --mauve-wash: #bfa6bc12;
+  --teal-wash: #96bab412;
+  --slate-glow: #9fb3c921;
+  --sage-glow: #a9bba021;
+  --sand-glow: #ddc59221;
+  --clay-glow: #dba98f21;
+  --mauve-glow: #bfa6bc21;
+  --teal-glow: #96bab421;
+  --slate-line: #9fb3c93d;
+  --sage-line: #a9bba03d;
+  --sand-line: #ddc5923d;
+  --clay-line: #dba98f3d;
+  --mauve-line: #bfa6bc3d;
+  --teal-line: #96bab43d;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 56px;
+  --radius-sm: 7px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+  --font-sans: "Satoshi", "Figtree", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}

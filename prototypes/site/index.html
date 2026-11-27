@@ -33,7 +33,7 @@
   --surface:#1c1c1b;
   --surface-2:#2b2b2a;
   --text:#feead8;
-  --dim:rgba(254,234,216,.64);
+  --dim:rgba(254,234,216,.80);
   --line:rgba(254,234,216,.12);
   --line-2:rgba(254,234,216,.26);
   --font-display:"Satoshi","Figtree",system-ui,sans-serif;
@@ -53,23 +53,23 @@ a{color:inherit}
 h1,h2,h3{font-family:var(--font-display);font-weight:500;letter-spacing:-.025em;text-wrap:balance;margin:0}
 p{margin:0}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
-.eyebrow{display:flex;align-items:center;gap:10px;font:500 12px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.eyebrow{display:flex;align-items:center;gap:10px;font:500 14px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
 .eyebrow b{font-weight:500;color:var(--text)}
 .section{padding:clamp(88px,11vw,168px) 0;border-top:1px solid var(--line)}
 .section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.618fr);gap:32px 64px;align-items:end;margin-bottom:clamp(48px,6vw,88px)}
 .section-head h2{font-size:clamp(34px,4.6vw,var(--t2));line-height:1.08}
-.section-head .lead{color:var(--dim);font-size:19px;max-width:52ch}
+.section-head .lead{color:rgba(254,234,216,.9);font-size:clamp(20px,1.9vw,23px);line-height:1.5;max-width:46ch}
 
 /* navegação */
 .nav{position:sticky;top:0;z-index:30;height:var(--nav);display:flex;align-items:center;gap:16px;padding:0 var(--gutter);background:rgba(20,20,20,.84);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
 .brand svg{height:26px;width:auto}
-.brand small{font:500 11px/1 var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--dim);padding-left:12px;border-left:1px solid var(--line-2)}
+.brand small{font:500 13px/1 var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--dim);padding-left:12px;border-left:1px solid var(--line-2)}
 .nav-links{display:flex;gap:30px;margin-left:auto;margin-right:14px}
 .nav-links a{color:var(--dim);text-decoration:none;font-size:15px;font-weight:500;padding:8px 0;transition:color .2s}
 .nav-links a:hover{color:var(--text)}
 .lang{display:flex;border:1px solid var(--line-2);border-radius:999px;padding:3px;margin-right:4px}
-.lang button{min-width:40px;min-height:36px;border:0;border-radius:999px;background:transparent;color:var(--dim);font:500 12px/1 var(--font-mono);letter-spacing:.06em;cursor:pointer}
+.lang button{min-width:40px;min-height:36px;border:0;border-radius:999px;background:transparent;color:var(--dim);font:500 14px/1 var(--font-mono);letter-spacing:.06em;cursor:pointer}
 .lang button[aria-pressed="true"]{background:var(--surface-2);color:var(--text)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:0 22px;border-radius:999px;border:1px solid var(--text);background:var(--text);color:var(--bg);font:500 15px/1 var(--font-body);text-decoration:none;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
 .btn:hover{background:transparent;color:var(--text)}
@@ -89,17 +89,17 @@ p{margin:0}
 .eye{fill:var(--text)}
 .eye-ring{fill:none;stroke:var(--text);stroke-width:1}
 
-.chip{position:absolute;left:0;top:0;display:flex;align-items:center;gap:7px;height:26px;padding:0 10px;border-radius:7px;background:var(--surface);border:1px solid var(--line);font:400 11px/1 var(--font-mono);color:var(--dim);white-space:nowrap;transform-origin:50% 50%;will-change:transform,opacity}
+.chip{position:absolute;left:0;top:0;display:flex;align-items:center;gap:7px;height:30px;padding:0 12px;border-radius:7px;background:var(--surface);border:1px solid var(--line);font:400 13px/1 var(--font-mono);color:var(--dim);white-space:nowrap;transform-origin:50% 50%;will-change:transform,opacity}
 .chip::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--text);opacity:.55;flex:none}
-.label{position:absolute;left:0;top:0;display:flex;align-items:center;gap:8px;font:500 11px/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--text);white-space:nowrap;pointer-events:none}
+.label{position:absolute;left:0;top:0;display:flex;align-items:center;gap:8px;font:500 13px/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--text);white-space:nowrap;pointer-events:none}
 .label svg{width:16px;height:16px;flex:none;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
 .label{white-space:normal;line-height:1.25;align-items:flex-start}
-.label.mini{font-size:9px;letter-spacing:.04em;gap:5px}
+.label.mini{font-size:12px;letter-spacing:.04em;gap:5px}
 .label.mini svg{width:12px;height:12px}
 .label.hide{display:none}
 
 .card{position:absolute;left:0;top:0;width:260px;padding:14px;display:grid;gap:10px;border-radius:16px;background:var(--surface);border:1px solid var(--line-2);box-shadow:0 24px 60px rgba(0,0,0,.5);opacity:0;transform:scale(.001);will-change:transform,opacity;pointer-events:none}
-.card-h{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font:500 11px/1.2 var(--font-mono);letter-spacing:.08em;text-transform:uppercase}
+.card-h{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font:500 13px/1.2 var(--font-mono);letter-spacing:.08em;text-transform:uppercase}
 
 .akpi{position:absolute;left:0;top:0;display:grid;gap:4px;align-content:start;opacity:0;pointer-events:none}
 .akpi .v{font:500 var(--fs,28px)/1 var(--font-display);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
@@ -113,11 +113,11 @@ p{margin:0}
 .akpi.n2 .row:nth-of-type(1),.akpi.n3 .row{display:flex}
 .fdot{fill:var(--text)}
 .tile.dec{flex-direction:column;align-items:flex-start;gap:4px;border-color:var(--line-2)}
-.tile.dec span{font:500 10px/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
-.tile.dec b{font-size:13px;font-weight:500}
-.card-h i{font-style:normal;letter-spacing:0;text-transform:none;color:var(--dim);font-size:10px}
+.tile.dec span{font:500 12px/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+.tile.dec b{font-size:14.5px;font-weight:500}
+.card-h i{font-style:normal;letter-spacing:0;text-transform:none;color:var(--dim);font-size:12px}
 .tile{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;border-radius:10px;background:var(--surface-2);border:1px solid var(--line)}
-.tile span{font-size:13px;font-weight:500;line-height:1.2}
+.tile span{font-size:14.5px;font-weight:500;line-height:1.2}
 .tile svg{width:84px;height:26px;flex:none;overflow:visible}
 .tile svg.sm{width:26px}
 .bar{fill:var(--text);transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(var(--g,0))}
@@ -135,7 +135,7 @@ p{margin:0}
 .cap .btn{margin-top:16px}
 .actions{display:flex;align-items:center;gap:16px}
 #replay{white-space:nowrap}
-.hint{font:500 11px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.hint{font:500 13px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
 .rail{position:absolute;right:clamp(6px,1.6vw,24px);top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:12px}
 .rail i{width:7px;height:7px;border-radius:50%;background:var(--line-2);transition:background .3s,transform .3s}
 .rail i.on{background:var(--text);transform:scale(1.4)}
@@ -147,21 +147,21 @@ p{margin:0}
 .offer{margin-top:clamp(48px,6vw,80px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border:1px solid var(--line);border-radius:20px;overflow:hidden}
 .offer div{padding:28px 28px 32px;display:grid;gap:10px;align-content:start}
 .offer div+div{border-left:1px solid var(--line)}
-.offer .k{font:500 12px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.offer .k{font:500 14px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
 .offer h3{font-size:var(--t1);line-height:1.15}
 .offer p{color:var(--dim);max-width:34ch}
 
 
 /* manifesto: ligar → organizar → construir */
-.man-lead{margin-top:28px;font-size:clamp(19px,1.8vw,22px);line-height:1.5;color:var(--dim);max-width:60ch}
+.man-lead{margin-top:28px;font-size:clamp(21px,2vw,26px);line-height:1.5;color:rgba(254,234,216,.9);max-width:60ch}
 .steps3{margin-top:clamp(48px,6vw,80px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .step3{position:relative;display:grid;gap:10px;align-content:start;padding:28px;border-radius:20px;border:1px solid var(--line);background:var(--surface);overflow:hidden;min-height:250px}
-.step3 .big{position:absolute;right:18px;top:6px;font:700 96px/1 var(--font-display);letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1px var(--line-2);pointer-events:none}
-.step3 .k{display:inline-grid;place-items:center;justify-self:start;height:30px;padding:0 12px;border-radius:999px;background:var(--text);color:var(--bg);font:500 12px/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;margin-bottom:28px}
+.step3 .big{position:static;font:700 64px/1 var(--font-display);letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1px var(--line-2);pointer-events:none;margin-bottom:6px}
+.step3 .k{display:inline-grid;place-items:center;justify-self:start;height:30px;padding:0 12px;border-radius:999px;background:var(--text);color:var(--bg);font:500 14px/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;margin-bottom:28px}
 .step3 h3{font-size:var(--t1);line-height:1.15}
-.step3 p{color:var(--dim);max-width:34ch}
+.step3 p{color:rgba(254,234,216,.88);font-size:18px;line-height:1.5;max-width:34ch}
 .gains{margin-top:16px;display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(24px,4vw,64px);align-items:center;padding:clamp(28px,4vw,48px);border-radius:24px;border:1px solid var(--line);background:var(--surface)}
-.gains-k{font:500 12px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.gains-k{font:500 14px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
 .gains h3{margin-top:16px;font-size:clamp(28px,3.4vw,var(--t2));line-height:1.08}
 .gains-sub{margin-top:16px;max-width:30ch;color:var(--dim);font-size:clamp(17px,1.6vw,20px);line-height:1.5}
 .gains ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
@@ -172,29 +172,29 @@ p{margin:0}
 .gains li span{color:var(--dim)}
 .connect{margin-top:16px;border-radius:24px;border:1px solid var(--line);background:radial-gradient(120% 140% at 80% 0%,rgba(254,234,216,.05),transparent 60%),var(--surface);padding:clamp(20px,3vw,32px);display:grid;gap:22px}
 .connect-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
-.pill{display:inline-flex;align-items:center;gap:10px;height:40px;padding:0 16px;border-radius:999px;border:1px solid var(--line-2);font:500 12px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase}
+.pill{display:inline-flex;align-items:center;gap:10px;height:40px;padding:0 16px;border-radius:999px;border:1px solid var(--line-2);font:500 14px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase}
 .pill svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round}
-.count-c{font:400 13px/1 var(--font-mono);color:var(--dim)}
+.count-c{font:400 14.5px/1 var(--font-mono);color:var(--dim)}
 .tabs{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:8px}
-.tab{display:grid;justify-items:center;gap:8px;padding:14px 6px;border-radius:12px;border:1px solid var(--line);background:transparent;color:var(--dim);font:500 13px/1.2 var(--font-body);cursor:pointer;transition:background .3s,border-color .3s,color .3s}
+.tab{display:grid;justify-items:center;gap:8px;padding:14px 6px;border-radius:12px;border:1px solid var(--line);background:transparent;color:var(--dim);font:500 14.5px/1.2 var(--font-body);cursor:pointer;transition:background .3s,border-color .3s,color .3s}
 .tab svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
 .tab:hover{color:var(--text);border-color:var(--line-2)}
 .tab[aria-selected="true"]{color:var(--bg);background:var(--text);border-color:var(--text)}
 .connect-body{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:20px;align-items:stretch}
 .tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;align-content:start}
-.tile2{display:grid;justify-items:center;align-content:center;min-height:64px;gap:10px;padding:16px 8px;border-radius:14px;border:1px solid var(--line);background:var(--surface-2);font:500 12px/1.2 var(--font-mono);letter-spacing:.04em;text-align:center;text-transform:uppercase;color:var(--dim);animation:tileIn .5s cubic-bezier(.2,.7,.2,1) both;transition:border-color .3s,color .3s}
+.tile2{display:grid;justify-items:center;align-content:center;min-height:64px;gap:10px;padding:16px 8px;border-radius:14px;border:1px solid var(--line);background:var(--surface-2);font:500 14px/1.2 var(--font-mono);letter-spacing:.04em;text-align:center;text-transform:uppercase;color:var(--dim);animation:tileIn .5s cubic-bezier(.2,.7,.2,1) both;transition:border-color .3s,color .3s}
 .tile2.on{border-color:var(--text);color:var(--text)}
 @keyframes tileIn{from{opacity:0;transform:translateY(10px) scale(.96)}}
 .c-detail{display:grid;gap:16px;align-content:start;padding:20px;border-radius:16px;border:1px solid var(--line-2);background:var(--surface-2)}
 .c-row{display:flex;align-items:center;gap:14px}
 .c-row b{display:block;font:500 26px/1.1 var(--font-display);letter-spacing:-.02em}
-.c-cat{font:400 12px/1 var(--font-mono);color:var(--dim);text-transform:uppercase;letter-spacing:.08em}
-.c-status{display:flex;align-items:center;gap:8px;font:500 12px/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:#9fd3ad}
+.c-cat{font:400 14px/1 var(--font-mono);color:var(--dim);text-transform:uppercase;letter-spacing:.08em}
+.c-status{display:flex;align-items:center;gap:8px;font:500 14px/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:#9fd3ad}
 .c-status i{width:8px;height:8px;border-radius:50%;background:#9fd3ad}
 .c-status.wait{color:var(--dim)}
 .c-status.wait i{background:var(--dim);animation:pulse 1s infinite}
 .c-flow{display:grid;grid-template-columns:auto minmax(30px,1fr) auto;align-items:center;gap:10px}
-.c-node{display:inline-flex;align-items:center;gap:8px;height:34px;padding:0 12px;border-radius:10px;border:1px solid var(--line-2);background:var(--bg);font:500 12px/1 var(--font-mono);white-space:nowrap}
+.c-node{display:inline-flex;align-items:center;gap:8px;height:34px;padding:0 12px;border-radius:10px;border:1px solid var(--line-2);background:var(--bg);font:500 14px/1 var(--font-mono);white-space:nowrap}
 .c-node svg{height:16px;width:auto;fill:none;stroke:var(--text);stroke-width:6}
 .c-line{position:relative;height:1px;background:var(--line-2)}
 .c-line i{position:absolute;top:-3px;left:0;width:7px;height:7px;border-radius:50%;background:var(--text);animation:travel 1.4s ease-in-out infinite}
@@ -214,7 +214,7 @@ p{margin:0}
 .flow.cycling .col.on .agent .prog::after{animation:prog 1.6s ease-out both}
 .flow.cycling .col.on .agent:nth-child(2) .prog::after{animation-delay:.2s}.flow.cycling .col.on .agent:nth-child(3) .prog::after{animation-delay:.4s}.flow.cycling .col.on .agent:nth-child(4) .prog::after{animation-delay:.6s}
 @keyframes prog{to{width:100%}}
-.ok{display:inline-flex;align-items:center;gap:6px;margin-top:6px;height:28px;padding:0 12px;border-radius:999px;background:var(--text);color:var(--bg);font:500 12px/1 var(--font-mono);letter-spacing:.04em;opacity:0;transform:scale(.8)}
+.ok{display:inline-flex;align-items:center;gap:6px;margin-top:6px;height:28px;padding:0 12px;border-radius:999px;background:var(--text);color:var(--bg);font:500 14px/1 var(--font-mono);letter-spacing:.04em;opacity:0;transform:scale(.8)}
 .flow.cycling .col.on .ok{animation:okPop .5s .9s cubic-bezier(.3,1.6,.5,1) both}
 .flow:not(.cycling) .ok{opacity:1;transform:none}
 @keyframes okPop{to{opacity:1;transform:none}}
@@ -228,7 +228,7 @@ p{margin:0}
 }
 @media (max-width:760px){
   .tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .tab{font-size:12px;padding:12px 4px}
+  .tab{font-size:14px;padding:12px 4px}
 }
 @media (prefers-reduced-motion:reduce){
   .tile2,.c-line i{animation:none}
@@ -242,7 +242,7 @@ p{margin:0}
 .area h3{font-size:24px;line-height:1.15}
 .area p{color:var(--dim);font-size:16px;max-width:36ch}
 .area ul{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px;align-self:end}
-.area li{font:400 12px/1 var(--font-mono);padding:8px 10px;border-radius:8px;border:1px solid var(--line);color:var(--dim)}
+.area li{font:400 14px/1 var(--font-mono);padding:8px 10px;border-radius:8px;border:1px solid var(--line);color:var(--dim)}
 .area .arc{position:absolute;right:-1px;bottom:-1px;width:96px;height:96px;pointer-events:none;opacity:.5;transition:opacity .3s}
 .area:hover .arc{opacity:1}
 .area .arc path{fill:none;stroke:var(--line-2);stroke-width:1}
@@ -251,7 +251,7 @@ p{margin:0}
 .ai-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:start}
 .uses{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
 .uses li{display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;padding:22px 0;border-bottom:1px solid var(--line)}
-.uses .n{font:500 12px/1.9 var(--font-mono);color:var(--dim)}
+.uses .n{font:500 14px/1.9 var(--font-mono);color:var(--dim)}
 .uses h3{font-size:22px;line-height:1.2;margin-bottom:6px}
 .uses p{color:var(--dim);font-size:16px;max-width:44ch}
 .principles{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
@@ -260,26 +260,26 @@ p{margin:0}
 
 .demo{position:sticky;top:calc(var(--nav) + 32px);border-radius:24px;background:var(--surface);border:1px solid var(--line);padding:20px;display:grid;gap:14px}
 .demo-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
-.demo-top .eyebrow{font-size:11px}
-.tag{font:500 11px/1 var(--font-mono);padding:6px 9px;border-radius:6px;border:1px solid var(--line-2);color:var(--dim)}
+.demo-top .eyebrow{font-size:13px}
+.tag{font:500 13px/1 var(--font-mono);padding:6px 9px;border-radius:6px;border:1px solid var(--line-2);color:var(--dim)}
 .mail{border-radius:14px;background:var(--surface-2);border:1px solid var(--line);padding:16px;display:grid;gap:12px}
 .mail-h{display:flex;justify-content:space-between;gap:12px;font-size:14px}
 .mail-h span{color:var(--dim)}
-.inv{position:relative;border-radius:10px;background:var(--bg);border:1px solid var(--line);padding:14px 16px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 16px;font:400 12px/1.5 var(--font-mono);color:var(--dim);overflow:hidden}
+.inv{position:relative;border-radius:10px;background:var(--bg);border:1px solid var(--line);padding:14px 16px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 16px;font:400 14px/1.5 var(--font-mono);color:var(--dim);overflow:hidden}
 .inv b{font-weight:500;color:var(--text)}
 .inv .qr{grid-row:1/span 4;grid-column:2;width:54px;height:54px;border-radius:4px;background:
   conic-gradient(from 90deg at 2px 2px,var(--text) 25%,transparent 0) 0 0/9px 9px;opacity:.55}
 .scan{position:absolute;left:0;right:0;top:0;height:34px;background:linear-gradient(180deg,transparent,rgba(254,234,216,.16),transparent);opacity:0;pointer-events:none}
-.arrow{display:flex;align-items:center;gap:10px;color:var(--dim);font:500 11px/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase}
+.arrow{display:flex;align-items:center;gap:10px;color:var(--dim);font:500 13px/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase}
 .arrow::before,.arrow::after{content:"";flex:1;height:1px;background:var(--line)}
 .fields{display:grid;gap:8px}
 .field{display:grid;grid-template-columns:120px minmax(0,1fr) auto;gap:12px;align-items:center;padding:11px 14px;border-radius:10px;border:1px solid var(--line);background:var(--surface-2);font-size:14px;opacity:.28;transition:opacity .35s,border-color .35s}
-.field span{color:var(--dim);font-size:13px}
+.field span{color:var(--dim);font-size:14.5px}
 .field b{font-weight:500;font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .field i{width:18px;height:18px;border-radius:50%;border:1px solid var(--line-2);display:grid;place-items:center;font-style:normal}
 .field i svg{width:10px;height:10px;fill:none;stroke:var(--text);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .confirm{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:4px}
-.confirm p{font-size:13px;color:var(--dim)}
+.confirm p{font-size:14.5px;color:var(--dim)}
 
 
 /* demo: da fatura à folha de obra */
@@ -304,15 +304,15 @@ p{margin:0}
 .demo.done .c-done{display:block;color:var(--text)}
 .fin-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
 .fin-head h4{margin:0;font:500 22px/1.2 var(--font-display);letter-spacing:-.015em}
-.live{display:inline-flex;align-items:center;gap:7px;font:500 11px/1 var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--dim)}
+.live{display:inline-flex;align-items:center;gap:7px;font:500 13px/1 var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--dim)}
 .live i{width:7px;height:7px;border-radius:50%;background:var(--text);animation:pulse 1.6s ease-in-out infinite}
 @keyframes pulse{50%{opacity:.25}}
 .fin-kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .fin-kpis div{display:grid;gap:6px;padding:14px;border-radius:12px;background:var(--surface-2);border:1px solid var(--line)}
-.fin-kpis span{font-size:12px;color:var(--dim)}
+.fin-kpis span{font-size:14px;color:var(--dim)}
 .fin-kpis b{font:500 21px/1.1 var(--font-display);letter-spacing:-.01em;font-variant-numeric:tabular-nums;white-space:nowrap}
 .budget{display:grid;gap:8px}
-.bar-row{display:flex;justify-content:space-between;font-size:13px;color:var(--dim)}
+.bar-row{display:flex;justify-content:space-between;font-size:14.5px;color:var(--dim)}
 .bar-row b{color:var(--text);font-weight:500;font-variant-numeric:tabular-nums}
 .track{height:8px;border-radius:99px;background:var(--surface-2);overflow:hidden}
 .track i{display:block;height:100%;width:62.6%;border-radius:99px;background:var(--text)}
@@ -322,10 +322,10 @@ p{margin:0}
 .line b{font-weight:500;font-variant-numeric:tabular-nums;white-space:nowrap}
 .demo.hit .line.hot{background:rgba(254,234,216,.08)}
 .demo.hit .line.hot span{color:var(--text)}
-.newentry{display:flex;flex-wrap:wrap;gap:4px 10px;font:400 11.5px/1.4 var(--font-mono);color:var(--dim);max-height:0;opacity:0;overflow:hidden;padding:0 10px;transition:max-height .5s,opacity .5s,padding .5s;border-bottom:1px solid transparent}
+.newentry{display:flex;flex-wrap:wrap;gap:4px 10px;font:400 13.5px/1.4 var(--font-mono);color:var(--dim);max-height:0;opacity:0;overflow:hidden;padding:0 10px;transition:max-height .5s,opacity .5s,padding .5s;border-bottom:1px solid transparent}
 .newentry .amt{color:var(--text);font-weight:500}
 .demo.hit .newentry{max-height:60px;opacity:1;padding:8px 10px;border-bottom-color:var(--line)}
-.alert{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:12px;border:1px solid var(--line-2);background:var(--surface-2);font-size:13px;line-height:1.45;opacity:0;transform:translateY(6px);transition:opacity .5s,transform .5s}
+.alert{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:12px;border:1px solid var(--line-2);background:var(--surface-2);font-size:14.5px;line-height:1.45;opacity:0;transform:translateY(6px);transition:opacity .5s,transform .5s}
 .alert svg{width:16px;height:16px;flex:none;margin-top:1px;fill:none;stroke:var(--text);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
 .alert p span{color:var(--dim)}
 .demo.alerted .alert{opacity:1;transform:none}
@@ -338,21 +338,21 @@ p{margin:0}
 .flow-row{display:grid;grid-template-columns:minmax(0,1fr) 44px minmax(0,1fr) 44px minmax(0,1.25fr) 44px minmax(0,1fr);align-items:center}
 .col{display:grid;grid-template-rows:auto 1fr;gap:12px;align-self:stretch;transition:opacity .5s}
 .col>:last-child{align-self:center}
-.flow.cycling .col{opacity:.38}
+.flow.cycling .col{opacity:.72}
 .flow.cycling .col.on{opacity:1}
-.col-k{font:500 11px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.col-k{font:500 13px/1 var(--font-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--dim)}
 .srcs{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
-.srcs li{font:400 12px/1 var(--font-mono);padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--surface-2)}
+.srcs li{font:400 14px/1 var(--font-mono);padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--surface-2)}
 .core{display:grid;justify-items:center;text-align:center;gap:6px;padding:22px 14px;border-radius:18px;border:1px solid var(--line-2);background:var(--surface-2)}
 .core svg{height:40px;width:auto;margin-bottom:4px}
 .core svg{fill:none;stroke:var(--text);stroke-width:4}
 .core svg.person{width:30px;height:30px;fill:none;stroke:var(--text);stroke-width:1.4;stroke-linecap:round}
 .core b{font:500 18px/1.2 var(--font-display)}
-.core span{font-size:13px;color:var(--dim)}
+.core span{font-size:14.5px;color:var(--dim)}
 .agents{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .agent{display:grid;gap:3px;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:var(--surface-2)}
 .agent b{font-size:14px;font-weight:500}
-.agent span{font-size:12px;color:var(--dim)}
+.agent span{font-size:14px;color:var(--dim)}
 .wire{position:relative;height:1px;background:var(--line-2);margin:0 8px}
 .wire i{position:absolute;top:-3px;left:0;width:7px;height:7px;border-radius:50%;background:var(--text);opacity:0}
 .flow.cycling .wire.on i,.ctl .wire i{animation:travel 1.2s ease-in-out infinite}
@@ -360,7 +360,7 @@ p{margin:0}
 @keyframes travelv{0%{top:0;opacity:0}15%,85%{opacity:1}100%{top:calc(100% - 7px);opacity:0}}
 .agent-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:16px}
 .agent-card{display:grid;gap:10px;align-content:start;padding:24px;border-radius:20px;border:1px solid var(--line);background:var(--surface)}
-.agent-card .n{font:500 12px/1 var(--font-mono);color:var(--dim)}
+.agent-card .n{font:500 14px/1 var(--font-mono);color:var(--dim)}
 .agent-card h3{font-size:20px;line-height:1.2}
 .agent-card p{color:var(--dim);font-size:15px}
 #ia .principles{margin-top:24px}
@@ -369,7 +369,7 @@ p{margin:0}
 .versus{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
 .vs-col{padding:24px 26px;border-radius:20px;border:1px solid var(--line)}
 .vs-col.yes{background:var(--surface-2);border-color:var(--line-2)}
-.vs-k{font:500 12px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+.vs-k{font:500 14px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
 .vs-col ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
 .vs-col li{display:flex;align-items:center;gap:12px;font-size:18px;font-weight:500}
 .vs-col.no li{color:var(--dim);text-decoration:line-through;text-decoration-color:var(--line-2)}
@@ -385,7 +385,7 @@ p{margin:0}
 .ctl .wire i{animation-duration:1.8s}
 .ctl-src{display:grid;gap:10px}
 .src{display:grid;gap:6px;padding:16px;border-radius:14px;border:1px solid var(--line);background:var(--surface-2)}
-.src .k{font:500 11px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.src .k{font:500 13px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
 .src b{font-size:15px;font-weight:500}
 .ctl-dash{display:grid;gap:14px;padding:18px;border-radius:16px;border:1px solid var(--line-2);background:var(--surface-2)}
 .ctl-dash .fin-kpis div{background:var(--bg)}
@@ -423,10 +423,10 @@ p{margin:0}
 .step .sq2{fill:none;stroke:var(--line);stroke-width:1}
 .step .arcs{fill:none;stroke:var(--text);stroke-width:1.6;stroke-linecap:round}
 .step .ghost-arc{fill:none;stroke:var(--line-2);stroke-width:1;stroke-dasharray:3 4}
-.step .k{font:500 12px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
-.step h3{font-size:24px}
-.step p{color:var(--dim);font-size:16px}
-.step .when{font:400 12px/1.4 var(--font-mono);color:var(--text);padding-top:14px;border-top:1px solid var(--line)}
+.step .k{font:500 14px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.step h3{font-size:24px;line-height:1.2}
+.step p{color:rgba(254,234,216,.88);font-size:17px;line-height:1.5}
+.step .when{font:400 14px/1.4 var(--font-mono);color:var(--text);padding-top:14px;border-top:1px solid var(--line)}
 
 /* ---------- caso ---------- */
 .case{display:grid;grid-template-columns:minmax(0,1.618fr) minmax(0,1fr);border:1px solid var(--line);border-radius:24px;overflow:hidden;background:var(--surface)}
@@ -434,16 +434,16 @@ p{margin:0}
 .case-meta{display:flex;flex-wrap:wrap;gap:8px}
 .case-body h3{font-size:clamp(22px,2.2vw,26px);line-height:1.2;max-width:30ch;padding-top:8px}
 .case-brand{font:700 clamp(44px,5.4vw,72px)/1 var(--font-display);letter-spacing:-.04em}
-.slide .case-meta .tag{font-size:13px;padding:8px 13px;border-radius:8px;color:var(--text)}
+.slide .case-meta .tag{font-size:14.5px;padding:8px 13px;border-radius:8px;color:var(--text)}
 .quote{margin:0;display:grid;gap:18px}
 .quote blockquote{margin:0}
 .quote blockquote p{font:500 clamp(26px,3vw,36px)/1.18 var(--font-display);letter-spacing:-.02em;color:var(--text);max-width:26ch;text-wrap:balance}
-.quote figcaption{font:500 13px/1.4 var(--font-mono);letter-spacing:.04em;color:var(--dim)}
+.quote figcaption{font:500 14.5px/1.4 var(--font-mono);letter-spacing:.04em;color:var(--dim)}
 .ph{outline:1px dashed var(--line-2);outline-offset:6px;border-radius:4px}
 .case-body p{color:var(--dim);max-width:56ch}
 .case-body .before-after{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
 .case-body .ba{padding:18px;border-radius:14px;border:1px solid var(--line);display:grid;gap:8px}
-.case-body .ba .k{font:500 11px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.case-body .ba .k{font:500 13px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
 .case-body .ba p{font-size:15px;color:var(--text)}
 .stats{display:grid;border-left:1px solid var(--line)}
 .stat{padding:clamp(24px,3vw,40px);display:grid;gap:6px;align-content:center}
@@ -461,7 +461,7 @@ p{margin:0}
 .slide{flex:0 0 100%;min-width:0;scroll-snap-align:start}
 .stat b.sm{font-size:clamp(28px,3vw,38px)}
 .slider-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:20px}
-.count{font:500 13px/1 var(--font-mono);letter-spacing:.08em;color:var(--dim)}
+.count{font:500 14.5px/1 var(--font-mono);letter-spacing:.08em;color:var(--dim)}
 .count b{font-weight:500;color:var(--text)}
 .arrows{display:flex;gap:10px}
 .arrow-btn{width:52px;height:52px;border-radius:50%;border:1px solid var(--line-2);background:transparent;color:var(--text);display:grid;place-items:center;cursor:pointer;transition:background .2s,border-color .2s,opacity .2s}
@@ -472,7 +472,7 @@ p{margin:0}
 .sec-tabs{display:flex;flex-wrap:wrap;gap:10px;margin:-24px 0 32px}
 .sec{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:0 18px;border-radius:999px;border:1px solid var(--line-2);background:transparent;color:var(--text);font:500 16px/1 var(--font-body);cursor:pointer;transition:background .25s,color .25s,border-color .25s}
 .sec:hover{border-color:var(--text)}
-.sec .n{font:500 11px/1 var(--font-mono);padding:5px 8px;border-radius:999px;background:var(--surface-2);color:var(--dim)}
+.sec .n{font:500 13px/1 var(--font-mono);padding:5px 8px;border-radius:999px;background:var(--surface-2);color:var(--dim)}
 .sec .n:empty{display:none}
 .sec[aria-selected="true"]{background:var(--text);color:var(--bg);border-color:var(--text)}
 .sec[aria-selected="true"] .n{background:rgba(20,20,20,.12);color:var(--bg)}
@@ -502,7 +502,7 @@ p{margin:0}
 .lu-cal-h h4{margin:6px 0 0;font:500 20px/1.2 var(--font-display)}
 .lu-toast{display:flex;align-items:center;gap:8px;max-height:0;padding:0 12px;margin:-7px 0;overflow:hidden;border-radius:12px;border:1px solid transparent;background:var(--bg);opacity:0;transform:translateY(-8px);transition:opacity .5s,transform .5s,max-height .5s,padding .5s,margin .5s,border-color .5s}
 .lu-toast b{display:block;font-size:14px;font-weight:500}
-.lu-toast div span{font:400 12px/1.4 var(--font-mono);color:var(--dim)}
+.lu-toast div span{font:400 14px/1.4 var(--font-mono);color:var(--dim)}
 .lu-toast>div{margin-left:6px}
 .lu-ph{width:34px;height:34px;flex:none;border-radius:6px;background:linear-gradient(160deg,#5b5248,#2b2b2a)}
 .lu-ph.b{background:linear-gradient(160deg,#6d6257,#3a3633)}
@@ -510,16 +510,16 @@ p{margin:0}
 .lu.ev .lu-toast{opacity:1;transform:none;max-height:80px;padding:10px 12px;margin:0;border-color:var(--text)}
 .lu-week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
 .day{display:grid;gap:6px;align-content:start;min-height:200px;padding:8px 6px;border-radius:10px;background:var(--bg);border:1px solid var(--line)}
-.day>p{font:500 10px/1.2 var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--dim);margin-bottom:2px}
+.day>p{font:500 12px/1.2 var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--dim);margin-bottom:2px}
 .day.today{border-color:var(--line-2)}
 .day.today>p{color:var(--text)}
-.post{display:flex;gap:5px;align-items:flex-start;padding:7px;border-radius:7px;border:1px solid var(--line);background:var(--surface);font-size:11px;line-height:1.3}
+.post{display:flex;gap:5px;align-items:flex-start;padding:7px;border-radius:7px;border:1px solid var(--line);background:var(--surface);font-size:13px;line-height:1.3}
 .post svg{width:10px;height:10px;flex:none;margin-top:1px;fill:none;stroke:var(--text);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .post.done{color:var(--dim)}
 .post.new{display:grid;gap:6px;border-color:var(--text);background:var(--surface-2);max-height:0;padding:0 7px;opacity:0;overflow:hidden;transition:max-height .6s,opacity .5s,padding .6s}
 .lu.slot .post.new{max-height:220px;opacity:1;padding:7px}
 .new-t{font-weight:500}
-.post.new .st{display:none;font:500 9.5px/1.3 var(--font-mono);letter-spacing:.04em;text-transform:uppercase;color:var(--dim)}
+.post.new .st{display:none;font:500 12px/1.3 var(--font-mono);letter-spacing:.04em;text-transform:uppercase;color:var(--dim)}
 .lu.slot .st-prep{display:block}
 .lu.sent .st-prep{display:none}.lu.sent .st-sent{display:block}
 .lu.approved .st-sent{display:none}.lu.approved .st-ok{display:block;color:var(--text)}
@@ -527,7 +527,7 @@ p{margin:0}
 .post .bar i{display:block;height:100%;width:0;background:var(--text);transition:width 2.6s linear}
 .lu.slot .post .bar i{width:100%}
 .steps-v{list-style:none;margin:0;padding:0;display:grid;gap:3px}
-.steps-v li{display:flex;align-items:center;gap:4px;font-size:10px;color:var(--dim);opacity:.35;transition:opacity .3s,color .3s}
+.steps-v li{display:flex;align-items:center;gap:4px;font-size:12px;color:var(--dim);opacity:.35;transition:opacity .3s,color .3s}
 .steps-v li svg{opacity:0;transition:opacity .3s}
 .lu.s1 .steps-v li:nth-child(1),.lu.s2 .steps-v li:nth-child(2),.lu.s3 .steps-v li:nth-child(3),.lu.s4 .steps-v li:nth-child(4){opacity:1;color:var(--text)}
 .lu.s1 .steps-v li:nth-child(1) svg,.lu.s2 .steps-v li:nth-child(2) svg,.lu.s3 .steps-v li:nth-child(3) svg,.lu.s4 .steps-v li:nth-child(4) svg{opacity:1}
@@ -535,25 +535,25 @@ p{margin:0}
 .wa-h{display:flex;align-items:center;gap:10px;padding:8px 8px 12px;border-bottom:1px solid var(--line)}
 .av{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--text);color:var(--bg);font:700 15px/1 var(--font-display)}
 .wa-h b{display:block;font-size:14px;font-weight:500}
-.wa-h span{font-size:11px;color:var(--dim)}
+.wa-h span{font-size:13px;color:var(--dim)}
 .wa-body{display:flex;flex-direction:column;justify-content:flex-end;gap:8px;padding:10px 4px 4px;overflow:hidden}
-.msg{position:relative;max-width:86%;padding:8px 10px 18px;border-radius:12px;font-size:12.5px;line-height:1.4}
+.msg{position:relative;max-width:86%;padding:8px 10px 18px;border-radius:12px;font-size:14px;line-height:1.4}
 .msg.in{align-self:flex-start;background:var(--surface-2);border-top-left-radius:4px}
 .msg.out{align-self:flex-end;background:var(--text);color:var(--bg);border-top-right-radius:4px;padding:6px 10px 16px}
-.msg .time{position:absolute;right:9px;bottom:4px;font:400 9.5px/1 var(--font-mono);opacity:.6}
+.msg .time{position:absolute;right:9px;bottom:4px;font:400 12px/1 var(--font-mono);opacity:.6}
 .vid{position:relative;margin-top:6px;height:118px;border-radius:8px;overflow:hidden;background:linear-gradient(160deg,#5b5248 0%,#2b2b2a 70%);display:grid;place-items:center}
 .vid.sm{height:64px}
 .vid .house{position:absolute;inset:auto 0 0 0;width:100%;height:70%;fill:none;stroke:rgba(254,234,216,.55);stroke-width:1.4;stroke-linejoin:round}
 .play{position:relative;width:34px;height:34px;border-radius:50%;background:rgba(254,234,216,.9);display:grid;place-items:center}
 .vid.sm .play{width:24px;height:24px}
 .play svg{width:12px;height:12px;fill:var(--bg);margin-left:2px}
-.dur{position:absolute;right:6px;bottom:6px;font:500 10px/1 var(--font-mono);padding:3px 5px;border-radius:4px;background:rgba(20,20,20,.7)}
-.vcap{position:absolute;left:8px;top:8px;font:500 10px/1 var(--font-mono);letter-spacing:.06em;text-transform:uppercase;padding:4px 6px;border-radius:4px;background:rgba(20,20,20,.7)}
+.dur{position:absolute;right:6px;bottom:6px;font:500 12px/1 var(--font-mono);padding:3px 5px;border-radius:4px;background:rgba(20,20,20,.7)}
+.vcap{position:absolute;left:8px;top:8px;font:500 12px/1 var(--font-mono);letter-spacing:.06em;text-transform:uppercase;padding:4px 6px;border-radius:4px;background:rgba(20,20,20,.7)}
 .wa-btns{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}
-.wa-btns span{display:grid;place-items:center;height:30px;border-radius:8px;border:1px solid var(--line-2);font-size:12px;font-weight:500}
+.wa-btns span{display:grid;place-items:center;height:30px;border-radius:8px;border:1px solid var(--line-2);font-size:14px;font-weight:500}
 .wa-btns .b-ok{transition:background .2s,color .2s,transform .15s}
 .lu.press .wa-btns .b-ok{background:var(--text);color:var(--bg);transform:scale(.95)}
-.wa-sys{align-self:center;font:500 10px/1 var(--font-mono);letter-spacing:.06em;text-transform:uppercase;padding:6px 10px;border-radius:999px;background:var(--surface-2);color:var(--dim)}
+.wa-sys{align-self:center;font:500 12px/1 var(--font-mono);letter-spacing:.06em;text-transform:uppercase;padding:6px 10px;border-radius:999px;background:var(--surface-2);color:var(--dim)}
 .typing{align-self:flex-start;display:none;gap:4px;padding:10px 12px;border-radius:12px;background:var(--surface-2)}
 .typing i{width:6px;height:6px;border-radius:50%;background:var(--dim);animation:pulse 1s infinite}
 .typing i:nth-child(2){animation-delay:.2s}.typing i:nth-child(3){animation-delay:.4s}
@@ -597,21 +597,21 @@ p{margin:0}
 .cform-x svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round}
 .cform-body{display:grid;gap:16px;padding:16px 28px}
 .fld{display:grid;gap:8px}
-.fld label{font:500 12px/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+.fld label{font:500 14px/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
 .fld input,.fld select,.fld textarea{width:100%;min-height:48px;padding:12px 14px;border-radius:12px;border:1px solid var(--line-2);background:var(--bg);color:var(--text);font:400 16px/1.4 var(--font-body);transition:border-color .2s}
 .fld textarea{resize:vertical;min-height:110px}
 .fld select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--dim) 50%),linear-gradient(135deg,var(--dim) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 15px) 50%;background-size:5px 5px;background-repeat:no-repeat;padding-right:40px}
 .fld select option{background:var(--surface);color:var(--text)}
 .fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--text)}
 .fld [aria-invalid="true"]{border-color:#e0a48c}
-.fld small{font-size:13px;color:var(--dim)}
+.fld small{font-size:14.5px;color:var(--dim)}
 .cform-err{font-size:14px;color:#e0a48c}
 .cform-foot{display:flex;justify-content:flex-end;padding:8px 28px 28px}
 .cform-done{display:grid;justify-items:center;text-align:center;gap:12px;padding:48px 28px 36px}
 .cform-done[hidden]{display:none}
 .cform-done svg{width:48px;height:48px;fill:none;stroke:var(--text);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
 .cform-done p{color:var(--dim);max-width:36ch}
-.cform-done .cform-note{font:400 12px/1.4 var(--font-mono);color:var(--dim);opacity:.7}
+.cform-done .cform-note{font:400 14px/1.4 var(--font-mono);color:var(--dim);opacity:.7}
 .cform-done .btn{margin-top:12px}
 /* ---------- contacto ---------- */
 .cta{padding:clamp(96px,12vw,180px) 0;border-top:1px solid var(--line);position:relative;overflow:hidden}
@@ -658,7 +658,7 @@ footer nav a:hover{color:var(--text)}
   .brand svg{height:22px}
   .captionbar{grid-template-columns:1fr;gap:14px;padding:14px var(--gutter) 22px;min-height:0}
   .cap .main{font-size:22px}
-  .cap .sub{font-size:15px;margin-top:6px}
+  .cap .sub{font-size:16px;margin-top:6px}
   .cap .btn{margin-top:12px}
   .actions{justify-content:space-between}
   .rail{display:none}
@@ -718,16 +718,24 @@ footer nav a:hover{color:var(--text)}
 .case-meta .client-logo{height:26px;width:auto;display:block}
 .agent-list{list-style:none;margin:clamp(40px,5vw,64px) 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(32px,5vw,80px)}
 .agent-list li{display:grid;grid-template-columns:34px 1fr;column-gap:12px;padding:26px 0;border-top:1px solid var(--line)}
-.agent-list .n{font:500 12px/2 var(--font-mono);color:var(--tone,var(--dim))}
+.agent-list .n{font:500 14px/2 var(--font-mono);color:var(--tone,var(--dim))}
 .agent-list h3{font-size:22px;line-height:1.2}
 .agent-list p{margin-top:8px;max-width:36ch;color:var(--dim);font-size:16px}
 .agent-list li:nth-child(1){--tone:var(--slate)}.agent-list li:nth-child(2){--tone:var(--sage)}.agent-list li:nth-child(3){--tone:var(--sand)}.agent-list li:nth-child(4){--tone:var(--clay)}
-.ia-note{display:flex;flex-wrap:wrap;gap:8px 0;margin-top:8px;padding-top:26px;border-top:1px solid var(--line);font:500 12px/1.4 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+.ia-note{display:flex;flex-wrap:wrap;gap:8px 0;margin-top:8px;padding-top:26px;border-top:1px solid var(--line);font:500 14px/1.4 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
 .ia-note span+span::before{content:"·";margin:0 14px}
 @media(max-width:860px){.agent-list{grid-template-columns:1fr}}
-.ia-para{margin-top:clamp(32px,4vw,48px);max-width:66ch;color:var(--dim);font-size:clamp(17px,1.5vw,19px);line-height:1.6}
+.ia-para{margin-top:clamp(32px,4vw,48px);max-width:62ch;color:var(--text);font-size:clamp(19px,1.7vw,22px);line-height:1.6}
 #ia .ia-note{margin-top:28px}
-.ia-para.ia-gain{margin-top:18px;color:var(--text)}
+.ia-para.ia-gain{margin-top:18px}
+/* porquê nós */
+.whyd{display:grid}
+.why-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:12px clamp(32px,6vw,96px);padding:clamp(26px,3vw,38px) 0;border-top:1px solid var(--line);align-items:start}
+.why-row:last-child{border-bottom:1px solid var(--line)}
+.why-row h3{font-size:clamp(24px,2.5vw,32px);line-height:1.15;max-width:20ch}
+.why-row p{font-size:clamp(18px,1.6vw,21px);line-height:1.55;color:rgba(254,234,216,.9);max-width:46ch}
+.why-close{margin-top:clamp(28px,3.5vw,44px);font:500 clamp(22px,2.4vw,30px)/1.3 var(--font-display);letter-spacing:-.01em;max-width:30ch}
+@media (max-width:760px){.why-row{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -817,9 +825,9 @@ footer nav a:hover{color:var(--text)}
       <h2>Software à medida, automação de processos e IA.</h2>
       <p class="man-lead">Com os dados todos num só sítio, sabe o que se passa de facto no negócio e decide com base em dados, não em intuição.</p>
       <div class="steps3">
-        <article class="step3"><span class="big" aria-hidden="true">01</span><span class="k">Integrar</span><h3>Integramos ferramentas e processos.</h3><p>Mapeamos o workflow de cada setor e ligamo-lo.</p></article>
-        <article class="step3"><span class="big" aria-hidden="true">02</span><span class="k">Organizar</span><h3>Organizamos os dados.</h3><p>Os dados de todas as áreas, no mesmo formato e num só sítio, para ver o negócio por inteiro.</p></article>
-        <article class="step3"><span class="big" aria-hidden="true">03</span><span class="k">Extrair</span><h3>Dos dados, a visão do negócio.</h3><p>KPIs, dashboards e modelos sempre atualizados, com IA onde faz diferença, para decidir com factos.</p></article>
+        <article class="step3"><span class="big" aria-hidden="true">01</span><h3>Integramos ferramentas e processos.</h3><p>Mapeamos o workflow de cada setor e ligamo-lo.</p></article>
+        <article class="step3"><span class="big" aria-hidden="true">02</span><h3>Organizamos os dados.</h3><p>Os dados de todas as áreas, no mesmo formato e num só sítio, para ver o negócio por inteiro.</p></article>
+        <article class="step3"><span class="big" aria-hidden="true">03</span><h3>Dos dados, a visão do negócio.</h3><p>KPIs, dashboards e modelos sempre atualizados, com IA onde faz diferença, para decidir com factos.</p></article>
       </div>
       <div class="connect" id="connect" aria-label="Exemplos de sistemas que ligamos">
         <div class="connect-top">
@@ -845,8 +853,7 @@ footer nav a:hover{color:var(--text)}
     <div class="wrap">
       <div class="section-head">
         <div>
-          <p class="eyebrow" style="margin-bottom:20px">Inteligência artificial</p>
-          <h2>A IA adapta-se à sua empresa. Não o contrário.</h2>
+                    <h2>A IA adapta-se à sua empresa. Não o contrário.</h2>
         </div>
         <p class="lead">Não substituímos os vossos sistemas nem as vossas pessoas: complementamos. A decisão fica sempre com a equipa.</p>
       </div>
@@ -889,13 +896,43 @@ footer nav a:hover{color:var(--text)}
     </div>
   </section>
 
+  <!-- ======================= PORQUÊ NÓS ======================= -->
+  <section class="section" id="porque">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>Porque não construir isto sozinho com IA?</h2>
+        </div>
+        <p class="lead">Pode tentar, e a IA ajuda a começar. O difícil é o que vem depois, e é aí que entramos.</p>
+      </div>
+      <div class="whyd">
+        <div class="why-row">
+          <h3>A IA escreve código. Não conhece o seu negócio.</h3>
+          <p>Começamos por ver a empresa a trabalhar. Por isso o sistema encaixa na forma como a equipa já trabalha e é usado desde o primeiro dia.</p>
+        </div>
+        <div class="why-row">
+          <h3>Um protótipo não é um sistema em que a empresa possa confiar.</h3>
+          <p>Ligar ERP, faturação e email, tratar os casos estranhos e manter tudo a funcionar é trabalho de todos os dias. Tratamos disso até funcionar, e continuamos.</p>
+        </div>
+        <div class="why-row">
+          <h3>O tempo da sua equipa vale mais noutro sítio.</h3>
+          <p>Quem constrói sozinho gasta semanas a corrigir scripts em vez de gerir o negócio. A sua equipa mantém-se no que faz crescer a empresa.</p>
+        </div>
+        <div class="why-row">
+          <h3>Quando algo falha, alguém tem de responder.</h3>
+          <p>Respondemos pelo resultado: alojamento, cópias de segurança e melhorias contínuas, com os seus dados protegidos e alojados na UE.</p>
+        </div>
+      </div>
+      <p class="why-close">Se já tem quem construa, ligue e mantenha isto, não precisa de nós. A maioria das empresas não tem.</p>
+    </div>
+  </section>
+
   <!-- ======================= CASO ======================= -->
   <section class="section" id="casos">
     <div class="wrap">
       <div class="section-head">
         <div>
-          <p class="eyebrow" style="margin-bottom:20px">Parceiros</p>
-          <h2>Problemas reais, resolvidos.</h2>
+                    <h2>Problemas reais, resolvidos.</h2>
         </div>
         <p class="lead">Nas palavras dos nossos parceiros: o problema que tinham e o que mudou.</p>
       </div>
@@ -1040,8 +1077,7 @@ footer nav a:hover{color:var(--text)}
           </div>
         </div>
         <div class="soon" id="soon" hidden>
-          <p class="eyebrow">Ativo</p>
-          <h3>Estamos em projeto neste setor.</h3>
+                    <h3>Estamos em projeto neste setor.</h3>
           <p>Seja o próximo parceiro a libertar a equipa, decidir com mais confiança e fazer a empresa crescer.</p>
           <a class="btn" href="#contacto">Falar connosco</a>
         </div>
@@ -1061,8 +1097,7 @@ footer nav a:hover{color:var(--text)}
     <div class="wrap">
       <div class="section-head">
         <div>
-          <p class="eyebrow" style="margin-bottom:20px">Método</p>
-          <h2>A perfeição constrói-se uma volta de cada vez.</h2>
+                    <h2>A perfeição constrói-se uma volta de cada vez.</h2>
         </div>
         <p class="lead">Começamos pequeno e crescemos com o que funciona. Cada fase só avança quando a anterior provou valor.</p>
       </div>
@@ -1081,8 +1116,7 @@ footer nav a:hover{color:var(--text)}
   <section class="cta" id="contacto">
     <svg class="cta-phi" viewBox="0 3 90 118" aria-hidden="true"><use href="#phi-shape"/></svg>
     <div class="wrap">
-      <p class="eyebrow">Contacto</p>
-      <h2>Conte-nos como trabalham. Resolvemos juntos.</h2>
+            <h2>Conte-nos como trabalham. Resolvemos juntos.</h2>
       <p>Uma conversa de 30 minutos chega para perceber se o software resolve, e como.</p>
       <div class="row">
         <button class="btn" type="button" id="open-form" aria-haspopup="dialog">Falar connosco
@@ -1095,7 +1129,7 @@ footer nav a:hover{color:var(--text)}
 <dialog class="cform" id="cform" aria-labelledby="cform-title">
   <form id="cform-form" novalidate>
     <div class="cform-head">
-      <div><p class="eyebrow">Contacto</p><h2 id="cform-title">Fale connosco</h2></div>
+      <div><h2 id="cform-title">Fale connosco</h2></div>
       <button type="button" class="cform-x" id="cform-close" aria-label="Fechar"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 3l8 8M11 3l-8 8"/></svg></button>
     </div>
     <div class="cform-body">
@@ -1223,7 +1257,7 @@ STEPS.forEach(function(s,i){
   sv.appendChild(el('path',{class:'arcs',d:pathOf(gs.arcs,i+1)}));
   c.appendChild(sv);
   var body=document.createElement('div');body.style.display='grid';body.style.gap='10px';
-  body.innerHTML='<span class="k">0'+(i+1)+' · '+s.k+'</span><h3>'+s.t+'</h3><p>'+s.d+'</p>';
+  body.innerHTML='<h3>'+s.t+'</h3><p>'+s.d+'</p>';
   c.appendChild(body);
   stepsEl.appendChild(c);
 });
@@ -1327,7 +1361,7 @@ function layout(){
   for(a=0;a<rows;a++)for(b=0;b<cols;b++)cells.push({r:a,c:b});
   for(a=cells.length-1;a>0;a--){b=Math.floor(rnd()*(a+1));t=cells[a];cells[a]=cells[b];cells[b]=t;}
   chips.forEach(function(c,idx){
-    var e=c.el;c.w=e.offsetWidth;c.h=e.offsetHeight||26;
+    var e=c.el;c.w=e.offsetWidth;c.h=e.offsetHeight||30;
     var cell=cells[idx],cw=W/cols,chh=H/rows;
     c.cx=clamp(cell.c*cw+rnd()*Math.max(0,cw-c.w),0,Math.max(0,W-c.w));
     c.cy=clamp(cell.r*chh+rnd()*Math.max(0,chh-c.h),0,Math.max(0,H-c.h));
@@ -1339,8 +1373,8 @@ function layout(){
     var q=G.sq[si],pad=Math.max(8,q.s*.06),lab=q.s>=44?22:0;
     var aw2=q.s-2*pad,ah2=q.s-2*pad-lab-8,cx=0,cy=0,rowH=0;
     chips.filter(function(c){return c.sec===si;}).forEach(function(c){
-      var sc3=Math.min(clamp(q.s/300,.62,1.4),aw2/c.w);
-      if(sc3<.55){c.absorb=true;return;}
+      var sc3=Math.min(clamp(q.s/300,1,1.4),aw2/c.w);
+      if(sc3<.86){c.absorb=true;return;}
       var w=c.w*sc3,h=c.h*sc3;
       if(cx>0&&cx+w>aw2){cx=0;cy+=rowH+8;rowH=0;}
       if(cy+h>ah2){c.absorb=true;return;}
@@ -1364,7 +1398,7 @@ function layout(){
     d.style.transform='translate('+(q.x+pad).toFixed(1)+'px,'+(q.y+pad+lab+6).toFixed(1)+'px)';
     d.style.width=Math.min(q.s-2*pad,240).toFixed(0)+'px';
     d.style.setProperty('--fs',clamp(q.s*.15,15,46).toFixed(0)+'px');
-    d.style.setProperty('--fl',clamp(q.s*.042,10,13).toFixed(0)+'px');
+    d.style.setProperty('--fl',clamp(q.s*.05,12,15).toFixed(0)+'px');
     d.style.setProperty('--sh',clamp(q.s*.12,12,40).toFixed(0)+'px');
   });
   chips.forEach(function(c){c.ox=c.ox||0;c.oy=c.oy||0;});
@@ -1667,7 +1701,7 @@ replay.addEventListener('click',function(){
 (function(){
   if(reduce||!('IntersectionObserver' in window))return;
   var heads='.section-head h2,.manifesto h2,.cta h2';
-  var items='.section-head .eyebrow,.section-head .lead,.manifesto .eyebrow,.man-lead,.step3,.gains,.connect,.ia-para,.ia-note,.area,.flow,.versus,.agent-card,.principles,.step,.sec-tabs,.cases,.trust-head,.why>div,.cta .eyebrow,.cta p,.cta .row';
+  var items='.section-head .eyebrow,.section-head .lead,.manifesto .eyebrow,.man-lead,.step3,.gains,.connect,.ia-para,.ia-note,.area,.flow,.versus,.agent-card,.principles,.step,.sec-tabs,.cases,.why-row,.why-close,.trust-head,.why>div,.cta .eyebrow,.cta p,.cta .row';
   var els=[];
   [].forEach.call(document.querySelectorAll(heads),function(e){e.classList.add('rv','rv-h');els.push(e);});
   [].forEach.call(document.querySelectorAll(items),function(e){e.classList.add('rv');els.push(e);});
@@ -1725,7 +1759,7 @@ replay.addEventListener('click',function(){
   });
 })();
 /* ---------- idioma: PT / EN ---------- */
-var EN={"Serviços": "Services", "IA": "AI", "Método": "Method", "Parceiros": "Partners", "Falar connosco": "Talk to us", "Visão geral": "Overview", "exemplo": "example", "Encomendas": "Orders", "Atendimento": "Support", "Faturação": "Invoicing", "Cada parte do seu negócio tem a sua maneira de trabalhar.": "Every part of your business speaks its own language.", "Organizamos os dados de cada setor.": "We organize each sector's data.", "Cadeia de abastecimento, atendimento, faturação, vendas: tudo no mesmo formato.": "Supply chain, support, invoicing, sales: all in the same format.", "Depois cruzamos a informação entre setores.": "Then we link information across sectors.", "Vendas, faturação e operações a falar entre si, sem copiar nem voltar a escrever.": "Sales, invoicing and operations talking to each other, with no copying or retyping.", "Ordem natural para a sua empresa.": "Natural order for your business.", "Software à medida, automação de processos e implementação de inteligência artificial.": "Custom software, process automation and artificial intelligence implementation.", "Ver animação": "Play animation", "· Consultoria de software": "· Software consultancy", "Software à medida, automação de processos e IA.": "Custom software, process automation and AI.", "Ligamos as ferramentas que a empresa já usa, juntamos os dados num só sítio e pomos agentes de IA a trabalhar sobre eles: leem documentos, acompanham custos, organizam pedidos e preparam relatórios.": "We connect the tools your company already uses, bring your data into one place and put AI agents to work on it: they read documents, track costs, organise requests and prepare reports.", "Os números ficam atualizados em tempo real, sem esperar que alguém os junte ou os analise. A equipa fica livre para tratar de outros assuntos e a empresa ganha espaço para crescer, com decisões mais organizadas, seguras e apoiadas em dados. Os seus dados ficam protegidos e alojados na UE.": "Numbers stay up to date in real time, without waiting for someone to put them together or analyse them. Your team is free to focus on other matters and the business gains room to grow, with more organised, safer, data-driven decisions. Your data stays protected and hosted in the EU.", "Lê faturas e encomendas e deixa tudo pronto a confirmar.": "Reads invoices and orders and leaves everything ready to confirm.", "Acompanha custos e tesouraria e avisa quando algo sai do previsto.": "Tracks costs and cash and flags anything that drifts from plan.", "Organiza os pedidos e sugere a resposta, com o histórico do cliente.": "Organises requests and suggests a reply, with the customer's history.", "Prepara o resumo da semana, sem folhas de cálculo.": "Prepares the weekly summary, no spreadsheets.", "Para quê": "Why it matters", "Poupar tempo é só o começo.": "Saving time is only the start.", "O que muda é saber o que se passa na empresa e decidir com dados.": "What changes is knowing what is going on in your business and deciding with data.", "Poupa tempo": "Saves time", "Sem folhas copiadas à mão nem relatórios feitos à pressa.": "No hand-copied spreadsheets or rushed reports.", "Sabe o que se passa": "Know what is going on", "Os números de todas as áreas, atualizados, num só sítio.": "Numbers from every area, up to date, in one place.", "Decide com dados": "Decide with data", "Escolhas apoiadas em factos, não em palpites.": "Choices backed by facts, not guesses.", "01 · Percebemos": "01 · We listen", "Vamos ao terreno": "We go on site", "Sentamo-nos com quem faz o trabalho e mapeamos o processo como ele é, não como devia ser.": "We sit with the people doing the work and map the process as it is, not as it should be.", "02 · Construímos": "02 · We build", "Rápido e à medida": "Fast and tailored", "Uma primeira versão pensada para o vosso processo, pronta a usar em semanas.": "A first version designed around your process, ready to use in weeks.", "03 · Decide": "03 · You decide", "Só paga se ficar": "Pay only if you keep it", "Supply chain e logística": "Supply chain and logistics", "Encomendas, stock, fornecedores e entregas num fluxo só, sem reescrever dados entre sistemas.": "Orders, stock, suppliers and deliveries in a single flow, with no retyping between systems.", "Encomendas automáticas": "Automatic orders", "Alertas de stock": "Stock alerts", "Pedidos de transporte": "Transport requests", "Atendimento ao cliente": "Customer service", "Pedidos e reclamações centralizados, respondidos mais depressa e sem se perderem no email.": "Requests and complaints in one place, answered faster and never lost in an inbox.", "Triagem de pedidos": "Request triage", "Respostas sugeridas": "Suggested replies", "Histórico do cliente": "Customer history", "Faturação e finanças": "Invoicing and finance", "Leitura de faturas": "Invoice reading", "QR fiscal": "Tax QR codes", "Custos por obra": "Cost per project", "Vendas e CRM": "Sales and CRM", "Leads, propostas e follow-ups num pipeline claro, com a equipa a saber sempre o próximo passo.": "Leads, proposals and follow-ups in a clear pipeline, so the team always knows the next step.", "Propostas": "Proposals", "Operações e equipas": "Operations and teams", "Equipas": "Teams", "Horas, turnos, tarefas e aprovações em ferramentas simples que a equipa usa de facto.": "Hours, shifts, tasks and approvals in simple tools your team actually uses.", "Folhas de horas": "Timesheets", "Aprovações": "Approvals", "Dados e visão clara": "Data and clear vision", "Os dados de todas as áreas num só sítio, com painéis que mostram o negócio em tempo real.": "Data from every area in one place, with dashboards that show the business in real time.", "Relatórios automáticos": "Automated reports", "Integrações": "Integrations", "Inteligência artificial": "Artificial intelligence", "IA onde ela faz trabalho a sério.": "AI where it does real work.", "Usamos IA quando poupa horas ou melhora uma decisão, integrada nas ferramentas que a equipa já usa. Sem experiências soltas.": "We use AI when it saves hours or improves a decision, built into the tools your team already uses. No side experiments.", "Leitura de documentos": "Document reading", "Faturas, encomendas e guias são lidas automaticamente. Os dados entram no sistema sem ninguém os escrever.": "Invoices, orders and delivery notes are read automatically. The data enters the system without anyone typing it.", "Emails e pedidos de clientes classificados por urgência e tema, e encaminhados para quem trata.": "Emails and customer requests sorted by urgency and topic, and routed to the right person.", "Assistente interno": "Internal assistant", "Responde a perguntas da equipa com os documentos, procedimentos e dados da própria empresa.": "Answers your team's questions using the company's own documents, procedures and data.", "Previsões": "Forecasting", "Stock, procura e tesouraria estimados a partir do histórico, para decidir com antecedência.": "Stock, demand and cash flow estimated from your history, so you can decide ahead of time.", "Agentes com supervisão": "Supervised agents", "Tarefas repetitivas feitas pela IA do início ao fim, com uma pessoa a aprovar o resultado.": "Repetitive tasks handled by AI from start to finish, with a person approving the result.", "Uma pessoa aprova sempre": "A person always approves", "Dados alojados na UE": "Data hosted in the EU", "Integrada no que já usam": "Built into what you already use", "Exemplo": "Example", "· Fatura recebida": "· Invoice received", "ilustrativo": "illustrative", "FATURA FT 2026/0418": "INVOICE FT 2026/0418", "Materiais de construção, Lda": "Building Supplies, Lda", "NIF 5XX XXX XXX": "VAT 5XX XXX XXX", "2 418,60 €": "€2,418.60", "Lido pela IA": "Read by AI", "Fornecedor": "Supplier", "Total c/ IVA": "Total incl. VAT", "Centro de custo": "Cost centre", "Obra 112 · Cascais": "Site 112 · Cascais", "Vencimento": "Due", "30 dias": "30 days", "Pronto para confirmar": "Ready to confirm", "Confirmar": "Confirm", "01 · Diagnóstico": "01 · Discovery", "02 · Piloto": "02 · Pilot", "03 · Produção": "03 · Production", "04 · Evolução": "04 · Evolution", "Perceber o processo": "Understand the process", "Visitamos a empresa, vemos o trabalho a acontecer e escolhemos onde o software tem mais impacto.": "We visit your company, watch the work happen and pick where software will have the most impact.", "Reunião no local · proposta escrita": "On-site meeting · written proposal", "Testar no trabalho real": "Test it on real work", "Pôr a funcionar": "Put it to work", "Se o piloto resolve, fica. Instalamos, formamos a equipa e ligamos aos sistemas existentes.": "If the pilot works, it stays. We install it, train the team and connect it to your existing systems.", "Crescer com a empresa": "Grow with the business", "Alojamento, cópias de segurança e melhorias contínuas. A próxima volta começa aqui.": "Hosting, backups and continuous improvements. The next turn starts here.", "Acompanhamento contínuo": "Ongoing support", "Do papel a um registo único.": "From paper to a single record.", "Nas palavras dos nossos parceiros: o problema que tinham e o que mudou.": "In our partners' words: the problem they had and what changed.", "“[Citação real do cliente: o problema que tinham e o que mudou, nas palavras dele]”": "“[Real client quote: the problem they had and what changed, in their own words]”", "[Nome] · [Cargo], [Empresa]": "[Name] · [Role], [Company]", "Construção civil": "Construction", "Grande Lisboa": "Greater Lisbon", "Em piloto": "In pilot", "Uma construtora que escrevia cada fatura três vezes.": "A construction firm that typed every invoice three times.", "Cada fatura de fornecedor era copiada à mão para três ficheiros diferentes, e só uma pessoa sabia operá-los. Construímos um registo único: a fatura chega por email, o QR fiscal é lido automaticamente e a equipa administrativa só confirma. O registo, o balanço e a folha de cada obra atualizam-se a partir daí.": "Every supplier invoice was copied by hand into three different spreadsheets, and only one person knew how to run them. We built a single record: the invoice arrives by email, the tax QR code is read automatically and the admin team just confirms. The ledger, the balance and each site's cost sheet update from there.", "Antes": "Before", "Três ficheiros Excel, preenchidos à mão, dependentes de uma pessoa.": "Three Excel files, filled in by hand, dependent on one person.", "Depois": "After", "Uma entrada por fatura, confirmada num clique, com as vistas sempre atualizadas.": "One entry per invoice, confirmed in a click, with every view up to date.", "faturas por mês": "invoices a month", "fornecedores diferentes": "different suppliers", "vezes que cada fatura é registada": "times each invoice is recorded", "Para empresas de": "For companies in", "Construção": "Construction", "Distribuição": "Distribution", "Indústria": "Manufacturing", "Restauração": "Hospitality", "Imobiliário": "Real estate", "Porquê nós": "Why us", "Construído por quem já construiu empresas.": "Built by people who have built companies.", "Fazemos parte da Phira Ventures, um venture studio em Lisboa e Nova Iorque. Sabemos o que custa uma hora perdida numa empresa pequena.": "We're part of Phira Ventures, a venture studio in Lisbon and New York. We know what a lost hour costs a small company.", "Uma empresa de cada vez": "One business at a time", "Software feito para o vosso processo, não um pacote genérico adaptado à força.": "Software built for your process, not a generic package forced to fit.", "Testa antes de pagar": "Try before you pay", "Semanas, não meses": "Weeks, not months", "Primeira versão rápida, melhorada com o uso real da equipa.": "A fast first version, improved through your team's real use.", "Um interlocutor": "One point of contact", "Quem vos ouve é quem acompanha o projeto, do diagnóstico à manutenção.": "The person who listens to you follows the project, from discovery to maintenance.", "Contacto": "Contact", "Qual é o processo que mais tempo vos rouba?": "Which process costs you the most time?", "Conte-nos em 30 minutos. Dizemos-lhe com franqueza se o software resolve, e como.": "Tell us in 30 minutes. We'll tell you honestly whether software can fix it, and how.", "Phira Software · parte da": "Phira Software · part of", "Lisboa · Nova Iorque": "Lisbon · New York", "Encomenda #4821": "Order #4821", "Stock baixo": "Low stock", "Fornecedor em atraso": "Supplier delayed", "Entrega 14:30": "Delivery 14:30", "Ticket aberto": "Open ticket", "Resposta pendente": "Reply pending", "Reclamação": "Complaint", "Chat novo": "New chat", "Fatura 0043": "Invoice 0043", "IVA 23%": "VAT 23%", "Por pagar": "Unpaid", "Nota de crédito": "Credit note", "Lead novo": "New lead", "Proposta enviada": "Proposal sent", "Folha de horas": "Timesheet", "Turno": "Shift", "Tarefa": "Task", "Relatório_FINAL(2).pdf": "Report_FINAL(2).pdf", "Mensagem WhatsApp": "WhatsApp message", "Folha manual": "Manual sheet", "Vendas": "Sales", "Operações": "Operations", "faturas@fornecedor.pt": "invoices@supplier.com", "Phira, início": "Phira, home", "Principal": "Main", "Apresentação": "Introduction", "Rodapé": "Footer", "Animação: peças soltas de várias áreas da empresa encaixam em quadrados de proporção áurea, formam uma espiral que chega a um painel central e termina no símbolo da Phira.": "Animation: loose pieces from different parts of a company fit into golden-ratio squares, form a spiral that reaches a central dashboard and ends on the Phira symbol.", "Exemplo ilustrativo: uma fatura recebida por email é lida pela IA e os dados ficam prontos para confirmar.": "Illustrative example: an invoice received by email is read by AI and the data is ready to confirm.", "Software à medida, automação de processos e inteligência artificial para empresas. Uma empresa de cada vez.": "Custom software, process automation and artificial intelligence for businesses. One business at a time.", "Problemas reais, resolvidos.": "Real problems, solved.", "O problema": "The problem", "O que fizemos": "What we did", "Cada fatura de fornecedor era copiada à mão para três ficheiros Excel, e só uma pessoa sabia operá-los.": "Every supplier invoice was copied by hand into three Excel files, and only one person knew how to run them.", "Um registo único: a fatura chega por email, o QR fiscal é lido automaticamente e a equipa só confirma. O balanço e a folha de cada obra atualizam-se sozinhos.": "A single record: the invoice arrives by email, the tax QR code is read automatically and the team just confirms. The balance and each site's cost sheet update on their own.", "[Nome] · [Cargo], Draft-in": "[Name] · [Role], Draft-in", "Parceiro anterior": "Previous partner", "Parceiro seguinte": "Next partner", "“Deixámos de correr atrás dos custos. Hoje sabemos, em tempo real, quanto está a custar cada obra e conseguimos antecipar desvios antes de acontecerem. Até agora, isso simplesmente não era possível.”": "“We've stopped chasing costs. We now know, in real time, what every site is costing us, so we can act on overruns before they happen. Until now, that simply wasn't possible.”", "de trabalho manual poupadas por semana": "of manual work saved every week", "Tempo real": "Real time", "situação financeira de cada obra, sempre à vista": "financial position of every site, always in view", "faturas por mês, registadas uma só vez": "invoices a month, each recorded just once", "15+ horas": "15+ hours", "Enviado para a folha da obra": "Sent to the site cost sheet", "✓ Confirmado": "✓ Confirmed", "Folha de obra": "Site cost sheet", "· atualizada agora": "· updated just now", "Orçamento": "Budget", "Custo real": "Actual cost", "Orçamento consumido": "Budget used", "180 000,00 €": "€180,000.00", "Materiais": "Materials", "Mão de obra": "Labour", "Subempreitadas": "Subcontractors", "Equipamentos": "Equipment", "39 880,00 €": "€39,880.00", "18 950,00 €": "€18,950.00", "5 599,80 €": "€5,599.80", "+ 2 418,60 €": "+ €2,418.60", "FT 2026/0418 · Materiais de construção, Lda": "FT 2026/0418 · Building Supplies, Lda", "Materiais a 92% do orçamento.": "Materials at 92% of budget.", "Rever antes da próxima encomenda.": "Review before the next order.", "Exemplo ilustrativo: uma fatura recebida por email é lida pela IA, confirmada por uma pessoa e entra logo na folha de custos da obra.": "Illustrative example: an invoice received by email is read by AI, confirmed by a person and goes straight into the site's cost sheet.", "Os dados num só sítio. Agentes que ajudam a equipa.": "All your data in one place. Agents that help your team.", "A IA só é útil quando conhece a empresa. Primeiro juntamos a informação dispersa num só lugar. Depois pomos agentes a organizar, preparar e alertar. A decisão fica sempre com as pessoas.": "AI is only useful when it knows your business. First we bring scattered information into one place. Then we put agents to work organising, preparing and flagging. The decision always stays with your people.", "Diagrama ilustrativo: as fontes de dados da empresa juntam-se num só sítio, os agentes trabalham sobre esses dados e a equipa decide.": "Illustrative diagram: the company's data sources come together in one place, agents work on that data and the team decides.", "A recolher dados de todas as fontes": "Collecting data from every source", "A organizar num só sítio": "Organising it in one place", "Os agentes preparam o trabalho": "Agents prepare the work", "À espera da aprovação da equipa": "Waiting for the team's approval", "01 · Fontes": "01 · Sources", "02 · Dados centralizados": "02 · Centralised data", "03 · Agentes": "03 · Agents", "04 · Equipa": "04 · Team", "Banco": "Bank", "Faturas": "Invoices", "Um só sítio": "One place", "Limpo, ligado e com histórico": "Clean, connected, with full history", "Documentos": "Documents", "Lê e classifica": "Reads and sorts", "Finanças": "Finance", "Acompanha custos": "Tracks costs", "Organiza pedidos": "Organises requests", "Relatórios": "Reports", "Prepara resumos": "Prepares summaries", "Decide e aprova": "Decides and approves", "A IA prepara. As pessoas decidem.": "AI prepares. People decide.", "Agente de documentos": "Document agent", "Lê faturas, encomendas e guias, preenche os dados e deixa tudo pronto para alguém confirmar.": "Reads invoices, orders and delivery notes, fills in the data and leaves everything ready for someone to confirm.", "Agente financeiro": "Finance agent", "Acompanha custos e tesouraria todos os dias e avisa quando alguma coisa sai do previsto.": "Tracks costs and cash every day and flags anything that drifts from plan.", "Agente de atendimento": "Customer service agent", "Organiza os pedidos que chegam, junta o histórico do cliente e sugere a resposta.": "Organises incoming requests, pulls in the customer's history and suggests a reply.", "Agente de relatórios": "Reporting agent", "Prepara o resumo da semana com os números que importam, sem ninguém montar folhas de cálculo.": "Prepares the weekly summary with the numbers that matter, without anyone building spreadsheets.", "Ajuda, nunca substitui": "Helps, never replaces", "O que construímos": "What we built", "· Da fatura à folha de obra": "· From invoice to site cost sheet", "1 de 1": "1 of 1", "Com os dados todos num só sítio, sabe o que se passa de facto no negócio e decide com base em dados, não em intuição.": "With all your data in one place, you know what is really going on in your business and decide on data, not gut feeling.", "Integrar": "Integrate", "Integramos ferramentas e processos.": "We integrate tools and processes.", "Mapeamos o workflow de cada setor e ligamo-lo.": "We map each sector's workflow and connect it.", "Organizar": "Organize", "Os dados num só sítio": "Your data in one place", "A informação fica limpa e ligada entre si. Pela primeira vez, a empresa inteira à vista.": "Information becomes clean and connected. For the first time, the whole company in view.", "Extrair": "Extract", "Dos dados, a visão do negócio.": "From the data, a view of the business.", "KPIs, dashboards e modelos sempre atualizados, com IA onde faz diferença, para decidir com factos.": "KPIs, dashboards and models, always up to date, with AI where it counts, so you decide on facts.", "Exemplos de sistemas que ligamos": "Examples of systems we connect", "Ligamos o que já usam": "We connect what you use", "exemplos": "examples", "Tipos de sistema": "System types", "Ligado ao sistema": "Connected", "A ligar…": "Connecting…", "Sistema central": "Central system", "Lemos e escrevemos os dados onde eles já estão, sem mudar a forma como a equipa trabalha.": "We read and write data where it already lives, without changing how your team works.", "Ficheiros": "Files", "RH": "HR", "Caixa partilhada": "Shared inbox", "Extratos": "Bank statements", "Pagamentos SEPA": "SEPA payments", "Escalas": "Rotas", "Processamento salarial": "Payroll", "✓ Aprovado": "✓ Approved", "A IA adapta-se à sua empresa. Não o contrário.": "AI adapts to your business. Not the other way round.", "Complementa, não substitui": "Complements, never replaces", "O que não fazemos": "What we don't do", "Obrigar a mudar de sistemas": "Force you to switch systems", "Substituir a equipa": "Replace your team", "Adaptar a empresa à ferramenta": "Bend your business to fit the tool", "O que fazemos": "What we do", "Trabalhar sobre o que já usam": "Build on what you already use", "Tirar o trabalho repetitivo à equipa": "Take repetitive work off your team", "IA que aprende como o vosso negócio funciona": "AI that learns how your business works", "Parceiros por setor": "Partners by sector", "Ativo": "Active", "Estamos em projeto neste setor.": "We're active in this sector.", "Seja o próximo parceiro a libertar a equipa, decidir com mais confiança e fazer a empresa crescer.": "Be the next partner to free up your team, decide with confidence and grow your business.", "Produto Phira": "Phira product", "Cada imóvel novo transforma-se num vídeo editado, entregue no WhatsApp do consultor.": "Every new listing becomes an edited video, delivered to the agent's WhatsApp.", "Lunis · plataforma construída dentro da Phira": "Lunis · a platform built inside Phira", "Conteúdo para redes sociais, automatizado para consultores imobiliários.": "Social media content, automated for real estate agents.", "Diário": "Daily", "um vídeo novo, já editado, todos os dias": "a new video, already edited, every day", "0 min": "0 min", "de edição para o consultor": "of editing for the agent", "entregue onde o consultor já trabalha": "delivered where the agent already works", "· Do imóvel novo ao vídeo pronto": "· From new listing to finished video", "Exemplo ilustrativo: entra um imóvel novo, a Lunis prepara o vídeo, coloca-o no plano de conteúdos e envia-o por WhatsApp para o consultor aprovar.": "Illustrative example: a new listing comes in, Lunis prepares the video, adds it to the content plan and sends it by WhatsApp for the agent to approve.", "Plano de conteúdos": "Content plan", "Semana de Ana Ribeiro": "Ana Ribeiro's week", "Lunis ativa": "Lunis active", "Novo imóvel na carteira": "New listing added", "T3 · Cascais · 8 fotografias": "3-bed · Cascais · 8 photos", "Seg": "Mon", "Ter": "Tue", "Qua · hoje": "Wed · today", "Qui": "Thu", "Sex": "Fri", "Sáb": "Sat", "Dom": "Sun", "Dica de mercado": "Market tip", "Imóvel: T2 Oeiras": "Listing: 2-bed Oeiras", "Bastidores da visita": "Behind the viewing", "Imóvel: T3 Cascais": "Listing: 3-bed Cascais", "A preparar vídeo": "Preparing video", "Enviado por WhatsApp": "Sent via WhatsApp", "Agendado · 9:00": "Scheduled · 9:00", "Fotografias": "Photos", "Guião": "Script", "Montagem": "Editing", "Legendas e música": "Captions and music", "Pergunta da semana": "Question of the week", "Testemunho de cliente": "Client testimonial", "Imóvel: moradia Sintra": "Listing: villa Sintra", "Bom dia, Ana. O vídeo de hoje já está pronto.": "Good morning, Ana. Today's video is ready.", "Publicado": "Posted", "Recebi o novo T3 em Cascais. Preparei o vídeo para amanhã:": "Got the new 3-bed in Cascais. I've prepared tomorrow's video:", "T3 · Cascais": "3-bed · Cascais", "Aprovar": "Approve", "Pedir alteração": "Request a change", "Aprovado": "Approved", "Agendado para quinta, 9:00": "Scheduled for Thursday, 9:00", "A perfeição constrói-se uma volta de cada vez.": "Perfection is built one turn at a time.", "Organizamos os dados.": "We organize the data.", "Os dados de todas as áreas, no mesmo formato e num só sítio, para ver o negócio por inteiro.": "Data from every area, in the same format and in one place, to see the whole business.", "< 1 min": "< 1 min", "para criar cada vídeo": "to create each video", "consultores em Portugal": "agents in Portugal", "50 mil+": "50K+", "publicações geradas": "posts generated", "mais leads geradas": "more leads generated", "Um plano de conteúdos completo que se faz sozinho, com cada publicação entregue já editada no WhatsApp do consultor.": "A complete content plan that runs itself, with every post delivered already edited to the agent's WhatsApp.", "Planeamento e criação de conteúdo para redes sociais, automatizados para consultores imobiliários: imóveis, dicas de mercado, bastidores e testemunhos.": "Social media content planning and creation, automated for real estate agents: listings, market tips, behind the scenes and testimonials.", "uma publicação nova, já editada, todos os dias": "a new post, already edited, every day", "· Plano de conteúdos automático": "· Automated content plan", "Com o apoio da Phira Ventures, Lisboa e Nova Iorque.": "Backed by Phira Ventures, Lisbon and New York.", "A equipa não muda de ferramentas": "Your team keeps its tools", "Trabalhamos por cima do que já usam. Nada para reaprender de raiz.": "We build on top of what you already use. Nothing to relearn from scratch.", "Os dados são vossos": "Your data is yours", "Ficam sempre vossos, alojados na UE, com cópias de segurança.": "It always stays yours, hosted in the EU, with backups.", "Um interlocutor do início ao fim": "One point of contact, start to finish", "O piloto corre no trabalho real. Só paga se decidir ficar com ele.": "The pilot runs on real work. You only pay if you decide to keep it.", "Construímos a primeira versão e a equipa usa-a no dia a dia, no trabalho real.": "We build the first version and your team uses it day to day, on real work.", "Semanas · no trabalho real": "Weeks · on real work", "Começamos pequeno e crescemos com o que funciona. Cada fase só avança quando a anterior provou valor.": "We start small and grow with what works. Each phase only begins once the last one has proven its value.", "Instalação e formação da equipa": "Installation and team training", "01 · Compreender": "01 · Understanding", "Como a empresa trabalha": "How your business works", "Visitamos a empresa e vemos o trabalho a acontecer, para perceber como cada área funciona de facto.": "We visit your company and watch the work happen, to understand how each area really runs.", "02 · Âmbito": "02 · Scope", "Definir o que construir": "Define what to build", "Juntos, escolhemos o processo com mais impacto e definimos o que a primeira versão vai fazer, com objetivos e prazos claros.": "Together we pick the process with the most impact and agree what the first version will do, with clear goals and timelines.", "03 · Construção": "03 · Build", "Construir e pôr a funcionar": "Build and launch", "Construímos a solução, testamo-la com a equipa no dia a dia, instalamos e ligamos aos sistemas que já usam.": "We build the solution, test it with your team day to day, install it and connect it to the systems you already use.", "Tente agarrar os dados · faça scroll": "Try to catch the data · scroll", "Uma visão clara do seu negócio.": "A clear view of your business.", "Tudo num só painel, para decidir com informação organizada.": "Everything in one dashboard, so you can decide with organized information.", "Sugestão": "Suggestion", "Rever custos da obra 112": "Review costs on site 112", "18 400 €": "€18,400", "Por receber": "Receivables", "Produtos": "Products", "Stock": "Stock", "Fornecedores": "Suppliers", "SKU 1042 · 12 un.": "SKU 1042 · 12 units", "Entrega hoje 14:30": "Delivery today 14:30", "Clientes": "Customers", "Pedidos de suporte": "Support requests", "Reclamações": "Complaints", "Ticket #312": "Ticket #312", "Devolução pendente": "Pending return", "Pagamentos": "Payments", "Despesas": "Expenses", "Tesouraria": "Cash flow", "FT 2026/0043": "INV 2026/0043", "Pagamento em atraso · 30 dias": "Payment overdue · 30 days", "Leads": "Leads", "Contratos": "Contracts", "Preços": "Pricing", "Proposta 2026/118": "Proposal 2026/118", "Colaboradores": "Employees", "Horas": "Hours", "Projetos": "Projects", "Turnos": "Shifts", "RE: Fwd: encomenda": "RE: Fwd: order", "Export_PHC.csv": "Export_PHC.csv", "Caderno de obra": "Site logbook", "Ferramentas diferentes, dados espalhados. Tudo existe, nada encaixa.": "Different tools, scattered data. It all exists. None of it fits.", "Entregas dentro do prazo": "On-time deliveries", "Tempo médio de resposta": "Average response time", "Propostas ganhas": "Proposals won", "Horas faturáveis": "Billable hours", "2 min": "2 min", "23 dias": "23 days", "Cobertura de stock": "Stock cover", "0,8%": "0.8%", "Encomendas com erro": "Orders with errors", "87%": "87%", "Pedidos resolvidos à primeira": "Requests solved first time", "4,7 / 5": "4.7 / 5", "Satisfação dos clientes": "Customer satisfaction", "38 dias": "38 days", "Prazo médio de recebimento": "Average collection time", "31%": "31%", "Margem bruta": "Gross margin", "42 000 €": "€42,000", "Pipeline do mês": "Pipeline this month", "7": "7", "Propostas abertas": "Open proposals", "6": "6", "Projetos ativos": "Active projects", "312 h": "312 h", "Horas esta semana": "Hours this week", "Ligamos o ERP, os Excels, o email e o banco a um só sistema e construímos por cima automações, painéis e agentes de IA. Lisboa.": "We connect your ERP, spreadsheets, email and bank into one system, then build automations, dashboards and AI agents on top. Lisbon.", "Software à medida em todas as áreas da empresa.": "Custom software across every part of your business.", "Não vendemos um produto genérico. Olhamos para o processo que mais tempo vos rouba e automatizamo-lo com a ferramenta certa, ligada ao PHC, ao ERP e ao resto da empresa.": "We don't sell an off-the-shelf product. We find the process that costs you the most time and automate it with the right tool, connected to your ERP and the rest of the business.", "Faturas de fornecedores lidas automaticamente, conciliação e custos por projeto ou obra sempre atualizados.": "Supplier invoices read automatically, reconciliation, and costs per project always up to date.", "Integração com PHC e ERP": "PHC and ERP integration", "Não substituímos os vossos sistemas nem as vossas pessoas: complementamos. A decisão fica sempre com a equipa.": "We do not replace your systems or your people: we complement them. The decision always stays with your team.", "Fale connosco": "Talk to us", "Fechar": "Close", "Nome": "Name", "Email": "Email", "Setor": "Industry", "Escolha o setor": "Choose your industry", "Outro": "Other", "Qual é o problema?": "What's the problem?", "Por exemplo: copiamos as faturas à mão para três ficheiros Excel.": "For example: we copy invoices by hand into three Excel files.", "Preencha os quatro campos, com um email válido.": "Please fill in all four fields with a valid email.", "Enviar pedido": "Send request", "Obrigado.": "Thank you.", "Recebemos o seu pedido e respondemos em breve.": "We've received your request and will reply soon.", "Pré-visualização: o envio é ligado na versão final do site.": "Preview: sending is connected in the final version of the site.", "Vamos pôr a sua empresa em ordem.": "Let's put your business in order.", "Uma conversa de 30 minutos chega para perceber se o software resolve, e como.": "A 30-minute conversation is enough to see whether software can fix it, and how.", "Conte-nos como trabalham. Resolvemos juntos.": "Tell us how you work. We'll figure it out together."};
+var EN={"Porque não construir isto sozinho com IA?": "Why not build this yourself with AI?", "Pode tentar, e a IA ajuda a começar. O difícil é o que vem depois, e é aí que entramos.": "You can try, and AI helps you get started. The hard part is what comes after, and that is where we come in.", "A IA escreve código. Não conhece o seu negócio.": "AI writes code. It does not know your business.", "Começamos por ver a empresa a trabalhar. Por isso o sistema encaixa na forma como a equipa já trabalha e é usado desde o primeiro dia.": "We start by watching the company work. That is why the system fits the way your team already works and gets used from day one.", "Um protótipo não é um sistema em que a empresa possa confiar.": "A prototype is not a system a company can rely on.", "Ligar ERP, faturação e email, tratar os casos estranhos e manter tudo a funcionar é trabalho de todos os dias. Tratamos disso até funcionar, e continuamos.": "Connecting ERP, invoicing and email, handling the odd cases and keeping it all running is daily work. We see it through until it works, and we keep going.", "O tempo da sua equipa vale mais noutro sítio.": "Your team's time is worth more elsewhere.", "Quem constrói sozinho gasta semanas a corrigir scripts em vez de gerir o negócio. A sua equipa mantém-se no que faz crescer a empresa.": "Building it alone means weeks spent fixing scripts instead of running the business. Your team stays on what grows the company.", "Quando algo falha, alguém tem de responder.": "When something breaks, someone has to answer.", "Respondemos pelo resultado: alojamento, cópias de segurança e melhorias contínuas, com os seus dados protegidos e alojados na UE.": "We answer for the result: hosting, backups and continuous improvements, with your data protected and hosted in the EU.", "Se já tem quem construa, ligue e mantenha isto, não precisa de nós. A maioria das empresas não tem.": "If you already have people who can build, connect and maintain this, you do not need us. Most companies do not.", "Serviços": "Services", "IA": "AI", "Método": "Method", "Parceiros": "Partners", "Falar connosco": "Talk to us", "Visão geral": "Overview", "exemplo": "example", "Encomendas": "Orders", "Atendimento": "Support", "Faturação": "Invoicing", "Cada parte do seu negócio tem a sua maneira de trabalhar.": "Every part of your business speaks its own language.", "Organizamos os dados de cada setor.": "We organize each sector's data.", "Cadeia de abastecimento, atendimento, faturação, vendas: tudo no mesmo formato.": "Supply chain, support, invoicing, sales: all in the same format.", "Depois cruzamos a informação entre setores.": "Then we link information across sectors.", "Vendas, faturação e operações a falar entre si, sem copiar nem voltar a escrever.": "Sales, invoicing and operations talking to each other, with no copying or retyping.", "Ordem natural para a sua empresa.": "Natural order for your business.", "Software à medida, automação de processos e implementação de inteligência artificial.": "Custom software, process automation and artificial intelligence implementation.", "Ver animação": "Play animation", "· Consultoria de software": "· Software consultancy", "Software à medida, automação de processos e IA.": "Custom software, process automation and AI.", "Ligamos as ferramentas que a empresa já usa, juntamos os dados num só sítio e pomos agentes de IA a trabalhar sobre eles: leem documentos, acompanham custos, organizam pedidos e preparam relatórios.": "We connect the tools your company already uses, bring your data into one place and put AI agents to work on it: they read documents, track costs, organise requests and prepare reports.", "Os números ficam atualizados em tempo real, sem esperar que alguém os junte ou os analise. A equipa fica livre para tratar de outros assuntos e a empresa ganha espaço para crescer, com decisões mais organizadas, seguras e apoiadas em dados. Os seus dados ficam protegidos e alojados na UE.": "Numbers stay up to date in real time, without waiting for someone to put them together or analyse them. Your team is free to focus on other matters and the business gains room to grow, with more organised, safer, data-driven decisions. Your data stays protected and hosted in the EU.", "Lê faturas e encomendas e deixa tudo pronto a confirmar.": "Reads invoices and orders and leaves everything ready to confirm.", "Acompanha custos e tesouraria e avisa quando algo sai do previsto.": "Tracks costs and cash and flags anything that drifts from plan.", "Organiza os pedidos e sugere a resposta, com o histórico do cliente.": "Organises requests and suggests a reply, with the customer's history.", "Prepara o resumo da semana, sem folhas de cálculo.": "Prepares the weekly summary, no spreadsheets.", "Para quê": "Why it matters", "Poupar tempo é só o começo.": "Saving time is only the start.", "O que muda é saber o que se passa na empresa e decidir com dados.": "What changes is knowing what is going on in your business and deciding with data.", "Poupa tempo": "Saves time", "Sem folhas copiadas à mão nem relatórios feitos à pressa.": "No hand-copied spreadsheets or rushed reports.", "Sabe o que se passa": "Know what is going on", "Os números de todas as áreas, atualizados, num só sítio.": "Numbers from every area, up to date, in one place.", "Decide com dados": "Decide with data", "Escolhas apoiadas em factos, não em palpites.": "Choices backed by facts, not guesses.", "01 · Percebemos": "01 · We listen", "Vamos ao terreno": "We go on site", "Sentamo-nos com quem faz o trabalho e mapeamos o processo como ele é, não como devia ser.": "We sit with the people doing the work and map the process as it is, not as it should be.", "02 · Construímos": "02 · We build", "Rápido e à medida": "Fast and tailored", "Uma primeira versão pensada para o vosso processo, pronta a usar em semanas.": "A first version designed around your process, ready to use in weeks.", "03 · Decide": "03 · You decide", "Só paga se ficar": "Pay only if you keep it", "Supply chain e logística": "Supply chain and logistics", "Encomendas, stock, fornecedores e entregas num fluxo só, sem reescrever dados entre sistemas.": "Orders, stock, suppliers and deliveries in a single flow, with no retyping between systems.", "Encomendas automáticas": "Automatic orders", "Alertas de stock": "Stock alerts", "Pedidos de transporte": "Transport requests", "Atendimento ao cliente": "Customer service", "Pedidos e reclamações centralizados, respondidos mais depressa e sem se perderem no email.": "Requests and complaints in one place, answered faster and never lost in an inbox.", "Triagem de pedidos": "Request triage", "Respostas sugeridas": "Suggested replies", "Histórico do cliente": "Customer history", "Faturação e finanças": "Invoicing and finance", "Leitura de faturas": "Invoice reading", "QR fiscal": "Tax QR codes", "Custos por obra": "Cost per project", "Vendas e CRM": "Sales and CRM", "Leads, propostas e follow-ups num pipeline claro, com a equipa a saber sempre o próximo passo.": "Leads, proposals and follow-ups in a clear pipeline, so the team always knows the next step.", "Propostas": "Proposals", "Operações e equipas": "Operations and teams", "Equipas": "Teams", "Horas, turnos, tarefas e aprovações em ferramentas simples que a equipa usa de facto.": "Hours, shifts, tasks and approvals in simple tools your team actually uses.", "Folhas de horas": "Timesheets", "Aprovações": "Approvals", "Dados e visão clara": "Data and clear vision", "Os dados de todas as áreas num só sítio, com painéis que mostram o negócio em tempo real.": "Data from every area in one place, with dashboards that show the business in real time.", "Relatórios automáticos": "Automated reports", "Integrações": "Integrations", "Inteligência artificial": "Artificial intelligence", "IA onde ela faz trabalho a sério.": "AI where it does real work.", "Usamos IA quando poupa horas ou melhora uma decisão, integrada nas ferramentas que a equipa já usa. Sem experiências soltas.": "We use AI when it saves hours or improves a decision, built into the tools your team already uses. No side experiments.", "Leitura de documentos": "Document reading", "Faturas, encomendas e guias são lidas automaticamente. Os dados entram no sistema sem ninguém os escrever.": "Invoices, orders and delivery notes are read automatically. The data enters the system without anyone typing it.", "Emails e pedidos de clientes classificados por urgência e tema, e encaminhados para quem trata.": "Emails and customer requests sorted by urgency and topic, and routed to the right person.", "Assistente interno": "Internal assistant", "Responde a perguntas da equipa com os documentos, procedimentos e dados da própria empresa.": "Answers your team's questions using the company's own documents, procedures and data.", "Previsões": "Forecasting", "Stock, procura e tesouraria estimados a partir do histórico, para decidir com antecedência.": "Stock, demand and cash flow estimated from your history, so you can decide ahead of time.", "Agentes com supervisão": "Supervised agents", "Tarefas repetitivas feitas pela IA do início ao fim, com uma pessoa a aprovar o resultado.": "Repetitive tasks handled by AI from start to finish, with a person approving the result.", "Uma pessoa aprova sempre": "A person always approves", "Dados alojados na UE": "Data hosted in the EU", "Integrada no que já usam": "Built into what you already use", "Exemplo": "Example", "· Fatura recebida": "· Invoice received", "ilustrativo": "illustrative", "FATURA FT 2026/0418": "INVOICE FT 2026/0418", "Materiais de construção, Lda": "Building Supplies, Lda", "NIF 5XX XXX XXX": "VAT 5XX XXX XXX", "2 418,60 €": "€2,418.60", "Lido pela IA": "Read by AI", "Fornecedor": "Supplier", "Total c/ IVA": "Total incl. VAT", "Centro de custo": "Cost centre", "Obra 112 · Cascais": "Site 112 · Cascais", "Vencimento": "Due", "30 dias": "30 days", "Pronto para confirmar": "Ready to confirm", "Confirmar": "Confirm", "01 · Diagnóstico": "01 · Discovery", "02 · Piloto": "02 · Pilot", "03 · Produção": "03 · Production", "04 · Evolução": "04 · Evolution", "Perceber o processo": "Understand the process", "Visitamos a empresa, vemos o trabalho a acontecer e escolhemos onde o software tem mais impacto.": "We visit your company, watch the work happen and pick where software will have the most impact.", "Reunião no local · proposta escrita": "On-site meeting · written proposal", "Testar no trabalho real": "Test it on real work", "Pôr a funcionar": "Put it to work", "Se o piloto resolve, fica. Instalamos, formamos a equipa e ligamos aos sistemas existentes.": "If the pilot works, it stays. We install it, train the team and connect it to your existing systems.", "Crescer com a empresa": "Grow with the business", "Alojamento, cópias de segurança e melhorias contínuas. A próxima volta começa aqui.": "Hosting, backups and continuous improvements. The next turn starts here.", "Acompanhamento contínuo": "Ongoing support", "Do papel a um registo único.": "From paper to a single record.", "Nas palavras dos nossos parceiros: o problema que tinham e o que mudou.": "In our partners' words: the problem they had and what changed.", "“[Citação real do cliente: o problema que tinham e o que mudou, nas palavras dele]”": "“[Real client quote: the problem they had and what changed, in their own words]”", "[Nome] · [Cargo], [Empresa]": "[Name] · [Role], [Company]", "Construção civil": "Construction", "Grande Lisboa": "Greater Lisbon", "Em piloto": "In pilot", "Uma construtora que escrevia cada fatura três vezes.": "A construction firm that typed every invoice three times.", "Cada fatura de fornecedor era copiada à mão para três ficheiros diferentes, e só uma pessoa sabia operá-los. Construímos um registo único: a fatura chega por email, o QR fiscal é lido automaticamente e a equipa administrativa só confirma. O registo, o balanço e a folha de cada obra atualizam-se a partir daí.": "Every supplier invoice was copied by hand into three different spreadsheets, and only one person knew how to run them. We built a single record: the invoice arrives by email, the tax QR code is read automatically and the admin team just confirms. The ledger, the balance and each site's cost sheet update from there.", "Antes": "Before", "Três ficheiros Excel, preenchidos à mão, dependentes de uma pessoa.": "Three Excel files, filled in by hand, dependent on one person.", "Depois": "After", "Uma entrada por fatura, confirmada num clique, com as vistas sempre atualizadas.": "One entry per invoice, confirmed in a click, with every view up to date.", "faturas por mês": "invoices a month", "fornecedores diferentes": "different suppliers", "vezes que cada fatura é registada": "times each invoice is recorded", "Para empresas de": "For companies in", "Construção": "Construction", "Distribuição": "Distribution", "Indústria": "Manufacturing", "Restauração": "Hospitality", "Imobiliário": "Real estate", "Porquê nós": "Why us", "Construído por quem já construiu empresas.": "Built by people who have built companies.", "Fazemos parte da Phira Ventures, um venture studio em Lisboa e Nova Iorque. Sabemos o que custa uma hora perdida numa empresa pequena.": "We're part of Phira Ventures, a venture studio in Lisbon and New York. We know what a lost hour costs a small company.", "Uma empresa de cada vez": "One business at a time", "Software feito para o vosso processo, não um pacote genérico adaptado à força.": "Software built for your process, not a generic package forced to fit.", "Testa antes de pagar": "Try before you pay", "Semanas, não meses": "Weeks, not months", "Primeira versão rápida, melhorada com o uso real da equipa.": "A fast first version, improved through your team's real use.", "Um interlocutor": "One point of contact", "Quem vos ouve é quem acompanha o projeto, do diagnóstico à manutenção.": "The person who listens to you follows the project, from discovery to maintenance.", "Contacto": "Contact", "Qual é o processo que mais tempo vos rouba?": "Which process costs you the most time?", "Conte-nos em 30 minutos. Dizemos-lhe com franqueza se o software resolve, e como.": "Tell us in 30 minutes. We'll tell you honestly whether software can fix it, and how.", "Phira Software · parte da": "Phira Software · part of", "Lisboa · Nova Iorque": "Lisbon · New York", "Encomenda #4821": "Order #4821", "Stock baixo": "Low stock", "Fornecedor em atraso": "Supplier delayed", "Entrega 14:30": "Delivery 14:30", "Ticket aberto": "Open ticket", "Resposta pendente": "Reply pending", "Reclamação": "Complaint", "Chat novo": "New chat", "Fatura 0043": "Invoice 0043", "IVA 23%": "VAT 23%", "Por pagar": "Unpaid", "Nota de crédito": "Credit note", "Lead novo": "New lead", "Proposta enviada": "Proposal sent", "Folha de horas": "Timesheet", "Turno": "Shift", "Tarefa": "Task", "Relatório_FINAL(2).pdf": "Report_FINAL(2).pdf", "Mensagem WhatsApp": "WhatsApp message", "Folha manual": "Manual sheet", "Vendas": "Sales", "Operações": "Operations", "faturas@fornecedor.pt": "invoices@supplier.com", "Phira, início": "Phira, home", "Principal": "Main", "Apresentação": "Introduction", "Rodapé": "Footer", "Animação: peças soltas de várias áreas da empresa encaixam em quadrados de proporção áurea, formam uma espiral que chega a um painel central e termina no símbolo da Phira.": "Animation: loose pieces from different parts of a company fit into golden-ratio squares, form a spiral that reaches a central dashboard and ends on the Phira symbol.", "Exemplo ilustrativo: uma fatura recebida por email é lida pela IA e os dados ficam prontos para confirmar.": "Illustrative example: an invoice received by email is read by AI and the data is ready to confirm.", "Software à medida, automação de processos e inteligência artificial para empresas. Uma empresa de cada vez.": "Custom software, process automation and artificial intelligence for businesses. One business at a time.", "Problemas reais, resolvidos.": "Real problems, solved.", "O problema": "The problem", "O que fizemos": "What we did", "Cada fatura de fornecedor era copiada à mão para três ficheiros Excel, e só uma pessoa sabia operá-los.": "Every supplier invoice was copied by hand into three Excel files, and only one person knew how to run them.", "Um registo único: a fatura chega por email, o QR fiscal é lido automaticamente e a equipa só confirma. O balanço e a folha de cada obra atualizam-se sozinhos.": "A single record: the invoice arrives by email, the tax QR code is read automatically and the team just confirms. The balance and each site's cost sheet update on their own.", "[Nome] · [Cargo], Draft-in": "[Name] · [Role], Draft-in", "Parceiro anterior": "Previous partner", "Parceiro seguinte": "Next partner", "“Deixámos de correr atrás dos custos. Hoje sabemos, em tempo real, quanto está a custar cada obra e conseguimos antecipar desvios antes de acontecerem. Até agora, isso simplesmente não era possível.”": "“We've stopped chasing costs. We now know, in real time, what every site is costing us, so we can act on overruns before they happen. Until now, that simply wasn't possible.”", "de trabalho manual poupadas por semana": "of manual work saved every week", "Tempo real": "Real time", "situação financeira de cada obra, sempre à vista": "financial position of every site, always in view", "faturas por mês, registadas uma só vez": "invoices a month, each recorded just once", "15+ horas": "15+ hours", "Enviado para a folha da obra": "Sent to the site cost sheet", "✓ Confirmado": "✓ Confirmed", "Folha de obra": "Site cost sheet", "· atualizada agora": "· updated just now", "Orçamento": "Budget", "Custo real": "Actual cost", "Orçamento consumido": "Budget used", "180 000,00 €": "€180,000.00", "Materiais": "Materials", "Mão de obra": "Labour", "Subempreitadas": "Subcontractors", "Equipamentos": "Equipment", "39 880,00 €": "€39,880.00", "18 950,00 €": "€18,950.00", "5 599,80 €": "€5,599.80", "+ 2 418,60 €": "+ €2,418.60", "FT 2026/0418 · Materiais de construção, Lda": "FT 2026/0418 · Building Supplies, Lda", "Materiais a 92% do orçamento.": "Materials at 92% of budget.", "Rever antes da próxima encomenda.": "Review before the next order.", "Exemplo ilustrativo: uma fatura recebida por email é lida pela IA, confirmada por uma pessoa e entra logo na folha de custos da obra.": "Illustrative example: an invoice received by email is read by AI, confirmed by a person and goes straight into the site's cost sheet.", "Os dados num só sítio. Agentes que ajudam a equipa.": "All your data in one place. Agents that help your team.", "A IA só é útil quando conhece a empresa. Primeiro juntamos a informação dispersa num só lugar. Depois pomos agentes a organizar, preparar e alertar. A decisão fica sempre com as pessoas.": "AI is only useful when it knows your business. First we bring scattered information into one place. Then we put agents to work organising, preparing and flagging. The decision always stays with your people.", "Diagrama ilustrativo: as fontes de dados da empresa juntam-se num só sítio, os agentes trabalham sobre esses dados e a equipa decide.": "Illustrative diagram: the company's data sources come together in one place, agents work on that data and the team decides.", "A recolher dados de todas as fontes": "Collecting data from every source", "A organizar num só sítio": "Organising it in one place", "Os agentes preparam o trabalho": "Agents prepare the work", "À espera da aprovação da equipa": "Waiting for the team's approval", "01 · Fontes": "01 · Sources", "02 · Dados centralizados": "02 · Centralised data", "03 · Agentes": "03 · Agents", "04 · Equipa": "04 · Team", "Banco": "Bank", "Faturas": "Invoices", "Um só sítio": "One place", "Limpo, ligado e com histórico": "Clean, connected, with full history", "Documentos": "Documents", "Lê e classifica": "Reads and sorts", "Finanças": "Finance", "Acompanha custos": "Tracks costs", "Organiza pedidos": "Organises requests", "Relatórios": "Reports", "Prepara resumos": "Prepares summaries", "Decide e aprova": "Decides and approves", "A IA prepara. As pessoas decidem.": "AI prepares. People decide.", "Agente de documentos": "Document agent", "Lê faturas, encomendas e guias, preenche os dados e deixa tudo pronto para alguém confirmar.": "Reads invoices, orders and delivery notes, fills in the data and leaves everything ready for someone to confirm.", "Agente financeiro": "Finance agent", "Acompanha custos e tesouraria todos os dias e avisa quando alguma coisa sai do previsto.": "Tracks costs and cash every day and flags anything that drifts from plan.", "Agente de atendimento": "Customer service agent", "Organiza os pedidos que chegam, junta o histórico do cliente e sugere a resposta.": "Organises incoming requests, pulls in the customer's history and suggests a reply.", "Agente de relatórios": "Reporting agent", "Prepara o resumo da semana com os números que importam, sem ninguém montar folhas de cálculo.": "Prepares the weekly summary with the numbers that matter, without anyone building spreadsheets.", "Ajuda, nunca substitui": "Helps, never replaces", "O que construímos": "What we built", "· Da fatura à folha de obra": "· From invoice to site cost sheet", "1 de 1": "1 of 1", "Com os dados todos num só sítio, sabe o que se passa de facto no negócio e decide com base em dados, não em intuição.": "With all your data in one place, you know what is really going on in your business and decide on data, not gut feeling.", "Integrar": "Integrate", "Integramos ferramentas e processos.": "We integrate tools and processes.", "Mapeamos o workflow de cada setor e ligamo-lo.": "We map each sector's workflow and connect it.", "Organizar": "Organize", "Os dados num só sítio": "Your data in one place", "A informação fica limpa e ligada entre si. Pela primeira vez, a empresa inteira à vista.": "Information becomes clean and connected. For the first time, the whole company in view.", "Extrair": "Extract", "Dos dados, a visão do negócio.": "From the data, a view of the business.", "KPIs, dashboards e modelos sempre atualizados, com IA onde faz diferença, para decidir com factos.": "KPIs, dashboards and models, always up to date, with AI where it counts, so you decide on facts.", "Exemplos de sistemas que ligamos": "Examples of systems we connect", "Ligamos o que já usam": "We connect what you use", "exemplos": "examples", "Tipos de sistema": "System types", "Ligado ao sistema": "Connected", "A ligar…": "Connecting…", "Sistema central": "Central system", "Lemos e escrevemos os dados onde eles já estão, sem mudar a forma como a equipa trabalha.": "We read and write data where it already lives, without changing how your team works.", "Ficheiros": "Files", "RH": "HR", "Caixa partilhada": "Shared inbox", "Extratos": "Bank statements", "Pagamentos SEPA": "SEPA payments", "Escalas": "Rotas", "Processamento salarial": "Payroll", "✓ Aprovado": "✓ Approved", "A IA adapta-se à sua empresa. Não o contrário.": "AI adapts to your business. Not the other way round.", "Complementa, não substitui": "Complements, never replaces", "O que não fazemos": "What we don't do", "Obrigar a mudar de sistemas": "Force you to switch systems", "Substituir a equipa": "Replace your team", "Adaptar a empresa à ferramenta": "Bend your business to fit the tool", "O que fazemos": "What we do", "Trabalhar sobre o que já usam": "Build on what you already use", "Tirar o trabalho repetitivo à equipa": "Take repetitive work off your team", "IA que aprende como o vosso negócio funciona": "AI that learns how your business works", "Parceiros por setor": "Partners by sector", "Ativo": "Active", "Estamos em projeto neste setor.": "We're active in this sector.", "Seja o próximo parceiro a libertar a equipa, decidir com mais confiança e fazer a empresa crescer.": "Be the next partner to free up your team, decide with confidence and grow your business.", "Produto Phira": "Phira product", "Cada imóvel novo transforma-se num vídeo editado, entregue no WhatsApp do consultor.": "Every new listing becomes an edited video, delivered to the agent's WhatsApp.", "Lunis · plataforma construída dentro da Phira": "Lunis · a platform built inside Phira", "Conteúdo para redes sociais, automatizado para consultores imobiliários.": "Social media content, automated for real estate agents.", "Diário": "Daily", "um vídeo novo, já editado, todos os dias": "a new video, already edited, every day", "0 min": "0 min", "de edição para o consultor": "of editing for the agent", "entregue onde o consultor já trabalha": "delivered where the agent already works", "· Do imóvel novo ao vídeo pronto": "· From new listing to finished video", "Exemplo ilustrativo: entra um imóvel novo, a Lunis prepara o vídeo, coloca-o no plano de conteúdos e envia-o por WhatsApp para o consultor aprovar.": "Illustrative example: a new listing comes in, Lunis prepares the video, adds it to the content plan and sends it by WhatsApp for the agent to approve.", "Plano de conteúdos": "Content plan", "Semana de Ana Ribeiro": "Ana Ribeiro's week", "Lunis ativa": "Lunis active", "Novo imóvel na carteira": "New listing added", "T3 · Cascais · 8 fotografias": "3-bed · Cascais · 8 photos", "Seg": "Mon", "Ter": "Tue", "Qua · hoje": "Wed · today", "Qui": "Thu", "Sex": "Fri", "Sáb": "Sat", "Dom": "Sun", "Dica de mercado": "Market tip", "Imóvel: T2 Oeiras": "Listing: 2-bed Oeiras", "Bastidores da visita": "Behind the viewing", "Imóvel: T3 Cascais": "Listing: 3-bed Cascais", "A preparar vídeo": "Preparing video", "Enviado por WhatsApp": "Sent via WhatsApp", "Agendado · 9:00": "Scheduled · 9:00", "Fotografias": "Photos", "Guião": "Script", "Montagem": "Editing", "Legendas e música": "Captions and music", "Pergunta da semana": "Question of the week", "Testemunho de cliente": "Client testimonial", "Imóvel: moradia Sintra": "Listing: villa Sintra", "Bom dia, Ana. O vídeo de hoje já está pronto.": "Good morning, Ana. Today's video is ready.", "Publicado": "Posted", "Recebi o novo T3 em Cascais. Preparei o vídeo para amanhã:": "Got the new 3-bed in Cascais. I've prepared tomorrow's video:", "T3 · Cascais": "3-bed · Cascais", "Aprovar": "Approve", "Pedir alteração": "Request a change", "Aprovado": "Approved", "Agendado para quinta, 9:00": "Scheduled for Thursday, 9:00", "A perfeição constrói-se uma volta de cada vez.": "Perfection is built one turn at a time.", "Organizamos os dados.": "We organize the data.", "Os dados de todas as áreas, no mesmo formato e num só sítio, para ver o negócio por inteiro.": "Data from every area, in the same format and in one place, to see the whole business.", "< 1 min": "< 1 min", "para criar cada vídeo": "to create each video", "consultores em Portugal": "agents in Portugal", "50 mil+": "50K+", "publicações geradas": "posts generated", "mais leads geradas": "more leads generated", "Um plano de conteúdos completo que se faz sozinho, com cada publicação entregue já editada no WhatsApp do consultor.": "A complete content plan that runs itself, with every post delivered already edited to the agent's WhatsApp.", "Planeamento e criação de conteúdo para redes sociais, automatizados para consultores imobiliários: imóveis, dicas de mercado, bastidores e testemunhos.": "Social media content planning and creation, automated for real estate agents: listings, market tips, behind the scenes and testimonials.", "uma publicação nova, já editada, todos os dias": "a new post, already edited, every day", "· Plano de conteúdos automático": "· Automated content plan", "Com o apoio da Phira Ventures, Lisboa e Nova Iorque.": "Backed by Phira Ventures, Lisbon and New York.", "A equipa não muda de ferramentas": "Your team keeps its tools", "Trabalhamos por cima do que já usam. Nada para reaprender de raiz.": "We build on top of what you already use. Nothing to relearn from scratch.", "Os dados são vossos": "Your data is yours", "Ficam sempre vossos, alojados na UE, com cópias de segurança.": "It always stays yours, hosted in the EU, with backups.", "Um interlocutor do início ao fim": "One point of contact, start to finish", "O piloto corre no trabalho real. Só paga se decidir ficar com ele.": "The pilot runs on real work. You only pay if you decide to keep it.", "Construímos a primeira versão e a equipa usa-a no dia a dia, no trabalho real.": "We build the first version and your team uses it day to day, on real work.", "Semanas · no trabalho real": "Weeks · on real work", "Começamos pequeno e crescemos com o que funciona. Cada fase só avança quando a anterior provou valor.": "We start small and grow with what works. Each phase only begins once the last one has proven its value.", "Instalação e formação da equipa": "Installation and team training", "01 · Compreender": "01 · Understanding", "Como a empresa trabalha": "How your business works", "Visitamos a empresa e vemos o trabalho a acontecer, para perceber como cada área funciona de facto.": "We visit your company and watch the work happen, to understand how each area really runs.", "02 · Âmbito": "02 · Scope", "Definir o que construir": "Define what to build", "Juntos, escolhemos o processo com mais impacto e definimos o que a primeira versão vai fazer, com objetivos e prazos claros.": "Together we pick the process with the most impact and agree what the first version will do, with clear goals and timelines.", "03 · Construção": "03 · Build", "Construir e pôr a funcionar": "Build and launch", "Construímos a solução, testamo-la com a equipa no dia a dia, instalamos e ligamos aos sistemas que já usam.": "We build the solution, test it with your team day to day, install it and connect it to the systems you already use.", "Tente agarrar os dados · faça scroll": "Try to catch the data · scroll", "Uma visão clara do seu negócio.": "A clear view of your business.", "Tudo num só painel, para decidir com informação organizada.": "Everything in one dashboard, so you can decide with organized information.", "Sugestão": "Suggestion", "Rever custos da obra 112": "Review costs on site 112", "18 400 €": "€18,400", "Por receber": "Receivables", "Produtos": "Products", "Stock": "Stock", "Fornecedores": "Suppliers", "SKU 1042 · 12 un.": "SKU 1042 · 12 units", "Entrega hoje 14:30": "Delivery today 14:30", "Clientes": "Customers", "Pedidos de suporte": "Support requests", "Reclamações": "Complaints", "Ticket #312": "Ticket #312", "Devolução pendente": "Pending return", "Pagamentos": "Payments", "Despesas": "Expenses", "Tesouraria": "Cash flow", "FT 2026/0043": "INV 2026/0043", "Pagamento em atraso · 30 dias": "Payment overdue · 30 days", "Leads": "Leads", "Contratos": "Contracts", "Preços": "Pricing", "Proposta 2026/118": "Proposal 2026/118", "Colaboradores": "Employees", "Horas": "Hours", "Projetos": "Projects", "Turnos": "Shifts", "RE: Fwd: encomenda": "RE: Fwd: order", "Export_PHC.csv": "Export_PHC.csv", "Caderno de obra": "Site logbook", "Ferramentas diferentes, dados espalhados. Tudo existe, nada encaixa.": "Different tools, scattered data. It all exists. None of it fits.", "Entregas dentro do prazo": "On-time deliveries", "Tempo médio de resposta": "Average response time", "Propostas ganhas": "Proposals won", "Horas faturáveis": "Billable hours", "2 min": "2 min", "23 dias": "23 days", "Cobertura de stock": "Stock cover", "0,8%": "0.8%", "Encomendas com erro": "Orders with errors", "87%": "87%", "Pedidos resolvidos à primeira": "Requests solved first time", "4,7 / 5": "4.7 / 5", "Satisfação dos clientes": "Customer satisfaction", "38 dias": "38 days", "Prazo médio de recebimento": "Average collection time", "31%": "31%", "Margem bruta": "Gross margin", "42 000 €": "€42,000", "Pipeline do mês": "Pipeline this month", "7": "7", "Propostas abertas": "Open proposals", "6": "6", "Projetos ativos": "Active projects", "312 h": "312 h", "Horas esta semana": "Hours this week", "Ligamos o ERP, os Excels, o email e o banco a um só sistema e construímos por cima automações, painéis e agentes de IA. Lisboa.": "We connect your ERP, spreadsheets, email and bank into one system, then build automations, dashboards and AI agents on top. Lisbon.", "Software à medida em todas as áreas da empresa.": "Custom software across every part of your business.", "Não vendemos um produto genérico. Olhamos para o processo que mais tempo vos rouba e automatizamo-lo com a ferramenta certa, ligada ao PHC, ao ERP e ao resto da empresa.": "We don't sell an off-the-shelf product. We find the process that costs you the most time and automate it with the right tool, connected to your ERP and the rest of the business.", "Faturas de fornecedores lidas automaticamente, conciliação e custos por projeto ou obra sempre atualizados.": "Supplier invoices read automatically, reconciliation, and costs per project always up to date.", "Integração com PHC e ERP": "PHC and ERP integration", "Não substituímos os vossos sistemas nem as vossas pessoas: complementamos. A decisão fica sempre com a equipa.": "We do not replace your systems or your people: we complement them. The decision always stays with your team.", "Fale connosco": "Talk to us", "Fechar": "Close", "Nome": "Name", "Email": "Email", "Setor": "Industry", "Escolha o setor": "Choose your industry", "Outro": "Other", "Qual é o problema?": "What's the problem?", "Por exemplo: copiamos as faturas à mão para três ficheiros Excel.": "For example: we copy invoices by hand into three Excel files.", "Preencha os quatro campos, com um email válido.": "Please fill in all four fields with a valid email.", "Enviar pedido": "Send request", "Obrigado.": "Thank you.", "Recebemos o seu pedido e respondemos em breve.": "We've received your request and will reply soon.", "Pré-visualização: o envio é ligado na versão final do site.": "Preview: sending is connected in the final version of the site.", "Vamos pôr a sua empresa em ordem.": "Let's put your business in order.", "Uma conversa de 30 minutos chega para perceber se o software resolve, e como.": "A 30-minute conversation is enough to see whether software can fix it, and how.", "Conte-nos como trabalham. Resolvemos juntos.": "Tell us how you work. We'll figure it out together."};
 var langBtns=[].slice.call(document.querySelectorAll('.lang button'));
 var metaDesc=document.querySelector('meta[name="description"]');
 var labelled=[].slice.call(document.querySelectorAll('[aria-label]'));

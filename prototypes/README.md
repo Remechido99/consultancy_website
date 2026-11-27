@@ -2,8 +2,6 @@
 
 Experiências de design antes de montar o site final.
 
-O hero animado (a espiral áurea) vive agora dentro de `site/`. O protótipo isolado `hero-espiral/` foi removido; continua no histórico do Git (PR #1).
-
 ## site
 
 Página principal completa, bilingue (PT/EN, botão na navegação; arranca em inglês se o browser não estiver em português). Marca Phira: fundo `#141414`, texto creme `#FEEAD8`, fonte Satoshi (Fontshare; Figtree como substituto), logótipo φ oficial.
@@ -20,8 +18,4 @@ Ordem das secções:
 
 Para adicionar um caso: copiar um bloco `<div class="slide" … data-sector="…">` dentro de `#slider` e mudar o setor; os separadores contam os casos sozinhos.
 
-Por confirmar antes de publicar:
-- `[EMAIL]` e `[EMAIL DE CONTACTO]`.
-- Autorização da Draft-in (nome, citação do Pedro e "15+ horas") e números da Lunis (sobretudo "+300% leads").
-- Lista de ferramentas no painel "Ligamos o que já usam": manter só as que conseguimos ligar.
-- Os números no hero e nas demos são exemplos ilustrativos.
+Os números no hero e nas demos são exemplos ilustrativos.
